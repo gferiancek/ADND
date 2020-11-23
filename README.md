@@ -10,3 +10,5 @@ Currently the master branch has been made, and am working on designing notes and
 - [ ] Take gathered info and start filling in the app
 - [ ] General idea is going to be Image -> Textview.  May do full bleed images inbetween to add visual diversity.
 - [ ] Review layout and tweak.  Seek additional content to add if desired.
+## Optional Features
+- [ ] If enough varied content is generated, possible implement a tabview into the ScrollView to help organize information.
