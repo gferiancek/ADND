@@ -16,4 +16,4 @@ Currently the master branch has been made, and am working on designing notes and
 - [x] Review layout and tweak.  Seek additional content to add if desired.
 ## Optional Features
 - [x] If enough varied content is generated, possible implement a tabview into the ScrollView to help organize information.
->>>>>>> 2af27805064fcef2a98e636bc3576ec4173b18da
+
