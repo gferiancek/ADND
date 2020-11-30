@@ -1,13 +1,14 @@
 <resources>
     <string name="app_name">SingleScreenWaniKani</string>
+
     // Strings for the About Section
-    <string name="about_title">What is WaniKani?</string>
+    <string name="about_header">What is WaniKani?</string>
     <string name="about_text">WaniKani is a web application for learning Japanese kanji and vocabulary with the goal of teaching you around 1,700 kanji and 5,000 vocabulary words in about one to two years. \"What? That\'s impossible!\" you scream. \"Okay, tell me more,\" you continue after calming down.\n\nWe use our own homebrew of radicals, mnemonics, space repetition system, and a kanji ordering that allows you to learn much more quickly and effectively compared to the traditional methods (which often involves hitting your face on a wall, we\'ve heard). Most kanji learning is broken and inefficient. We want to fix that for ourselves and for you. Try out the first three levels for free to see how well the methods in WaniKani work!</string>
     <string name="about_text_2">Still not convinced? Maybe this piece of the Crabigator prophecy will entice you to come along:</string>
     <string name="about_text_3">Could it be? Talk around the tea pot is all about you... They say you\'ve joined our ranks and will be training with us. Is that true?\n\nIt\'s weird because. Well. I shouldn\'t say this to a new recruit but… your name is one that gets thrown around a lot in the Crabigator Prophecies. I mean, it could be another person but… no, I\'ve said too much.\n\nFor now you are only a guppy. Floundering about on the sand, gasping for the radicals, kanji, and vocabulary knowledge you crave. You must learn these. Then you must pass the test to become a full member. The Crabigator is calling you, but will you listen?</string>
 
     // Strings for the How It Works section
-    <string name="how_it_works_title">How the WaniKani method works</string>
+    <string name="how_it_works_header">How the WaniKani method works</string>
     <string name="mnemonics_title">Mnemonics</string>
     <string name="mnemonics_description">WaniKani has mnemonics to teach you every single radical, kanji, and vocabulary word on the site. Waste less time, memorize and recall way more.</string>
     <string name="radicals_title">Radicals</string>
@@ -22,7 +23,7 @@
     <string name="srs_description">WaniKani is more than just flashcards. Our SRS algorithm adjusts time between reviews for each individual item, calculated by your last session. You will see a radical, kanji, or vocabulary in your reviews at the optimal time for you, not anybody else.</string>
 
     // Strings for the Team section
-    <string name="the_team_title">The Team</string>
+    <string name="the_team_header">The Team</string>
     <string name="koichi_title">Koichi</string>
     <string name="koichi_description">The world renowned creator and original follower of the Crabigator.  Koichi is responsible for creating the WaniKani learning system.</string>
     <string name="koichi_contact">koichi@wanikani.com</string>
@@ -32,7 +33,7 @@
     <string name="other_projects">Koichi and Viet are also responsible for:\ntofugu.com, Japanese Language and Culture Blog\ntextfugu.com, An Online Japanese Textbook</string>
 
     // Strings for the Testimonial section
-    <string name="testimonials_title">Testimonials</string>
+    <string name="testimonials_header">Testimonials</string>
     <string name="testimonial_1_body">I first studied Japanese in college, and although I was pretty good at grammar, kanji was my weak point. I stayed up all night cramming before the final, and forgot all the kanji again right after I took it. WaniKani teaches kanji with mnemonics to help remember and make sense of them, and reinforces the lessons with periodic reviews to make sure they stick. And knowing kanji helped me to make the jump from reading textbooks to reading native material — the books, video games, and manga I’d always wanted to read.</string>
     <string name="testimonial_1_info">Andrew Eliot, Self-learner\nBoston, MA USA</string>
     <string name="testimonial_2_body">My job requires me to work with a number of Japanese companies. Reports in English usually lag a day or so behind, whereas Japanese ones are available instantly. I once tried to read the Japanese reports and was put off by how many kanji I could not read. I didn\’t think I could ever learn that much with my tight schedule. After using WaniKani for about a year, I tried to read those reports again. I was amazed by how much I could understand, and my boss is now very keen on sending me to the Tokyo office to further my career.</string>

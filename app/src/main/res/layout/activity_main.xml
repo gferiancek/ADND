@@ -43,7 +43,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/about_title"
+                android:text="@string/about_header"
                 android:textSize="20sp"
                 android:paddingStart="72dp"
                 android:paddingEnd="24dp"
@@ -62,7 +62,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/about_text"
-                android:textSize="14sp"
                 android:paddingStart="72dp"
                 android:paddingEnd="24dp"
                 android:paddingBottom="8dp"/>
@@ -96,7 +95,8 @@
                 android:id="@+id/how_it_works_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -106,7 +106,7 @@
                     android:id="@+id/how_it_works_title_textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/how_it_works_title"
+                    android:text="@string/how_it_works_header"
                     android:textSize="20sp"
                     android:paddingStart="64dp"
                     android:paddingEnd="24dp"
@@ -342,13 +342,14 @@
             <RelativeLayout
                 android:id="@+id/the_team_layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/team_title_textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/the_team_title"
+                    android:text="@string/the_team_header"
                     android:textSize="20sp"
                     android:paddingStart="72dp"
                     android:paddingEnd="24dp"
@@ -395,7 +396,6 @@
                     android:layout_below="@id/koichi_name_textView"
                     android:layout_toEndOf="@id/koichi_imageView"
                     android:text="@string/koichi_description"
-                    android:textSize="14sp"
                     android:paddingStart="4dp"
                     android:paddingEnd="24dp"
                     android:paddingBottom="4dp"/>
@@ -441,7 +441,6 @@
                     android:layout_below="@id/viet_name_textView"
                     android:layout_toEndOf="@id/viet_imageView"
                     android:text="@string/viet_description"
-                    android:textSize="14sp"
                     android:paddingStart="4dp"
                     android:paddingEnd="24dp"
                     android:paddingBottom="4dp"/>
@@ -474,7 +473,8 @@
                 android:id="@+id/testimonials_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -485,7 +485,7 @@
                     android:id="@+id/testimonials_title_textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/testimonials_title"
+                    android:text="@string/testimonials_header"
                     android:textSize="20sp"
                     android:paddingStart="72dp"
                     android:paddingEnd="24dp"
