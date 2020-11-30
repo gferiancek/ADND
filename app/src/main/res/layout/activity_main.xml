@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,31 +9,651 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="fitCenter"
-        android:src="@drawable/wanikani_logo" />
+        android:layout_height="0dp"
+        android:src="@drawable/wanikani_logo"
+        android:scaleType="centerInside"
+        android:layout_weight=".5"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="8dp"/>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:scaleType="fitCenter"
-        android:src="@drawable/wanikani" />
+        android:layout_weight="2.5"
+        android:src="@drawable/wanikani_3"
+        android:scaleType="centerCrop"/>
 
     <ScrollView
+        android:id="@+id/content_scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2">
+        android:layout_weight="7">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/about_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"  >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_title"
+                android:textSize="20sp"
+                android:paddingStart="72dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/about_wanikani"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:paddingBottom="8dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hello World!" />
-        </RelativeLayout>
+                android:text="@string/about_text"
+                android:textSize="14sp"
+                android:paddingStart="72dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="8dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_text_2"
+                    android:textStyle="bold"
+                    android:paddingStart="72dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_text_3"
+                    android:textStyle="italic"
+                    android:paddingStart="72dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="8dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wanikani_crabigator"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/how_it_works_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp">
+                <TextView
+                    android:id="@+id/how_it_works_title_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/how_it_works_title"
+                    android:textSize="20sp"
+                    android:paddingStart="64dp"
+                    android:paddingEnd="24dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"/>
+
+                <ImageView
+                    android:id="@+id/mnemonics_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mnemonics"
+                    android:layout_below="@id/how_it_works_title_textView"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/mnemonics_title_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mnemonics_title"
+                    android:textStyle="bold"
+                    android:layout_below="@id/how_it_works_title_textView"
+                    android:layout_toEndOf="@id/mnemonics_imageView"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"/>
+
+                <TextView
+                    android:id="@+id/mnemonics_description_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mnemonics_description"
+                    android:layout_below="@id/mnemonics_title_textView"
+                    android:layout_toEndOf="@id/mnemonics_imageView"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/radicals_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/radicals"
+                    android:layout_alignParentTop="true"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/radicals_title_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radicals_title"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@id/radicals_imageView"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"/>
+
+                <TextView
+                    android:id="@+id/radicals_description_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radicals_description"
+                    android:layout_below="@id/radicals_title_textView"
+                    android:layout_toEndOf="@id/radicals_imageView"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/kanji_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/kanji"
+                    android:layout_alignParentTop="true"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/kanji_title_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kanji_title"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@id/kanji_imageView"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"/>
+
+                <TextView
+                    android:id="@+id/kanji_description_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kanji_description"
+                    android:layout_below="@id/kanji_title_textView"
+                    android:layout_toEndOf="@id/kanji_imageView"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/vocabulary_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vocabulary"
+                    android:layout_alignParentTop="true"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/vocabulary_title_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vocabulary_title"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@id/vocabulary_imageView"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"/>
+
+                <TextView
+                    android:id="@+id/vocabulary_description_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vocabulary_description"
+                    android:layout_below="@id/vocabulary_title_textView"
+                    android:layout_toEndOf="@id/vocabulary_imageView"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/lessons_and_reviews_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/lessons_and_reviews"
+                    android:layout_alignParentTop="true"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/lessons_and_reviews_title_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lessons_and_reviews_title"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@id/lessons_and_reviews_imageView"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"/>
+
+                <TextView
+                    android:id="@+id/lessons_and_reviews_description_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lessons_and_reviews_description"
+                    android:layout_below="@id/lessons_and_reviews_title_textView"
+                    android:layout_toEndOf="@id/lessons_and_reviews_imageView"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="16dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/srs_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/srs"
+                    android:layout_alignParentTop="true"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/srs_title_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/srs_title"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@id/srs_imageView"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"/>
+
+                <TextView
+                    android:id="@+id/srs_description_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/srs_description"
+                    android:layout_below="@id/srs_title_textView"
+                    android:layout_toEndOf="@id/srs_imageView"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="16dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/the_team_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/team_title_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/the_team_title"
+                    android:textSize="20sp"
+                    android:paddingStart="72dp"
+                    android:paddingEnd="24dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/team_title_imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wanikani_team"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:layout_below="@id/team_title_textView"
+                    android:paddingBottom="8dp"/>
+
+                <ImageView
+                    android:id="@+id/koichi_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/koichi"
+                    android:layout_below="@id/team_title_imageView"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="4dp"
+                    android:paddingBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/koichi_name_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/team_title_imageView"
+                    android:layout_toEndOf="@id/koichi_imageView"
+                    android:text="@string/koichi_title"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/koichi_description_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/koichi_name_textView"
+                    android:layout_toEndOf="@id/koichi_imageView"
+                    android:text="@string/koichi_description"
+                    android:textSize="14sp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/koichi_description_textView"
+                    android:layout_toEndOf="@id/koichi_imageView"
+                    android:text="@string/koichi_contact"
+                    android:autoLink="email"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="4dp" />
+
+                <ImageView
+                    android:id="@+id/viet_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/viet"
+                    android:layout_below="@id/koichi_imageView"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="4dp"
+                    android:paddingBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/viet_name_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/koichi_imageView"
+                    android:layout_toEndOf="@id/viet_imageView"
+                    android:text="@string/viet_title"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/viet_description_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viet_name_textView"
+                    android:layout_toEndOf="@id/viet_imageView"
+                    android:text="@string/viet_description"
+                    android:textSize="14sp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viet_description_textView"
+                    android:layout_toEndOf="@id/viet_imageView"
+                    android:text="@string/viet_contact"
+                    android:autoLink="email"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="4dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viet_imageView"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="center"
+                    android:paddingStart="72dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/other_projects"
+                    android:autoLink="web|phone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/testimonials_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/testimonials_title_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/testimonials_title"
+                    android:textSize="20sp"
+                    android:paddingStart="72dp"
+                    android:paddingEnd="24dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/testimonial_1_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/testimonial_1"
+                    android:layout_below="@id/testimonials_title_textView"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="4dp"/>
+
+                <TextView
+                    android:id="@+id/testimonial_1_body_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/testimonial_1_body"
+                    android:layout_below="@id/testimonials_title_textView"
+                    android:layout_toEndOf="@id/testimonial_1_imageView"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/testimonial_1_info"
+                    android:textStyle="bold"
+                    android:layout_below="@id/testimonial_1_imageView"
+                    android:layout_toStartOf="@id/testimonial_1_body_textView"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/testimonial_2_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/testimonial_2"
+                    android:layout_alignParentTop="true"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="4dp"/>
+
+                <TextView
+                    android:id="@+id/testimonial_2_body_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/testimonial_2_body"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@id/testimonial_2_imageView"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/testimonial_2_info"
+                    android:textStyle="bold"
+                    android:layout_below="@id/testimonial_2_imageView"
+                    android:layout_toStartOf="@id/testimonial_2_body_textView"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/testimonial_3_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/testimonial_3"
+                    android:layout_alignParentTop="true"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="4dp"/>
+
+                <TextView
+                    android:id="@+id/testimonial_3_body_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/testimonial_3_body"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@id/testimonial_3_imageView"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/testimonial_3_info"
+                    android:textStyle="bold"
+                    android:layout_below="@id/testimonial_3_imageView"
+                    android:layout_toStartOf="@id/testimonial_3_body_textView"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/testimonial_4_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/testimonial_4"
+                    android:layout_alignParentTop="true"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="4dp"/>
+
+                <TextView
+                    android:id="@+id/testimonial_4_body_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/testimonial_4_body"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@id/testimonial_4_imageView"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/testimonial_4_info"
+                    android:textStyle="bold"
+                    android:layout_below="@id/testimonial_4_imageView"
+                    android:layout_toStartOf="@id/testimonial_4_body_textView"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="8dp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/testimonial_banner"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+        </LinearLayout>
     </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemTextAppearanceActive="@style/MyBottomNavigationView.TextAppearance"
+        app:itemTextAppearanceInactive="@style/MyBottomNavigationView.TextAppearance"
+        app:menu="@menu/bottom_navigation_menu"
+        app:labelVisibilityMode="labeled"
+        android:paddingBottom="4dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="16dp"/>
 
 </LinearLayout>
