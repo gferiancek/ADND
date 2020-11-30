@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/about"
+        android:enabled="true"
+        android:title="@string/bottom_navigation_about" />
+
+    <item
+        android:id="@+id/how_it_works"
+        android:enabled="true"
+        android:title="@string/bottom_navigation_method" />
+
+    <item
+        android:id="@+id/the_team"
+        android:enabled="true"
+        android:title="@string/bottom_navigation_the_team" />
+
+    <item
+        android:id="@+id/testimonials"
+        android:enabled="true"
+        android:title="@string/bottom_navigation_testimonials" />
+</menu>
