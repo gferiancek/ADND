@@ -7,16 +7,16 @@ Project #2  Build an app to track metrics for a sport/game of your choice
   - [x] Test the waters with inning highliting feature; basic funcionality implemented.
 ## 2. Build XML Layout and general framework for the rest of the app.
 - [ ] Layout xml and basic onclick functions
-- [ ] Implement function to extract data from textviews and post to the scoreboard.
 ## 3. Core Java Logic
-- [ ] Implement functions to transition to the next inning:
-    - Needs to use postToScoreboard function to save stats
-    - Shift focus to proper inning
-    - Reset data back to 0 to track the next inning's statistics
+- [ ] Implement function to extract data from textviews and post to the scoreboard.
 - [ ] Implement functions to detect and respond to various game states.
     - If a user gets three strikes, strikes should reset to 0 and an out should be added.
     - Similar logic for balls/outs.
     - Function that determines when the game is over and who is the winner.
+- [ ] Implement functions to transition to the next inning:
+    - Needs to use postToScoreboard function to save stats
+    - Shift focus to proper inning
+    - Reset data back to 0 to track the next inning's statistics
 ## 4. Visual Polish and Code Clean Up
 - [ ]
 ## Optional Features
