@@ -18,7 +18,7 @@ Project #2  Build an app to track metrics for a sport/game of your choice
     - Shift focus to proper inning
     - Reset data back to 0 to track the next inning's statistics
 ## 4. Visual Polish and Code Clean Up
-- [ ] 
+- [ ] Done
 ## Optional Features
 - [ ] Implement Function to detect if game needs to add Extra Innings for Tie Breakers.
     - Should follow rules of no more than 9 extra innings, and update the scoreboard to show extra innings.
