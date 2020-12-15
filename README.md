@@ -6,10 +6,10 @@ Project #2  Build an app to track metrics for a sport/game of your choice
   - [x] Implement RecyclerViews in order to make handling changes to scoreboard easier.
   - [x] Test the waters with inning highliting feature; basic funcionality implemented.
 ## 2. Build XML Layout and general framework for the rest of the app.
-- [ ] Layout xml and basic onclick functions
+- [x] Layout xml and basic onclick functions
 ## 3. Core Java Logic
 - [ ] Implement function to extract data from textviews and post to the scoreboard.
-- [ ] Implement functions to detect and respond to various game states.
+- [x] Implement functions to detect and respond to various game states.
     - If a user gets three strikes, strikes should reset to 0 and an out should be added.
     - Similar logic for balls/outs.
     - Function that determines when the game is over and who is the winner.
