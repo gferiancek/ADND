@@ -13,12 +13,14 @@ Project #2  Build an app to track metrics for a sport/game of your choice
     - If a user gets three strikes, strikes should reset to 0 and an out should be added.
     - Similar logic for balls/outs.
     - Function that determines when the game is over and who is the winner.
-- [ ] Implement functions to transition to the next inning:
+- [x] Implement functions to transition to the next inning:
     - Needs to use postToScoreboard function to save stats
     - Shift focus to proper inning
     - Reset data back to 0 to track the next inning's statistics
 ## 4. Visual Polish and Code Clean Up
-- [ ] Done
+- [x] Done
 ## Optional Features
 - [ ] Implement Function to detect if game needs to add Extra Innings for Tie Breakers.
     - Should follow rules of no more than 9 extra innings, and update the scoreboard to show extra innings.
+    
+Decided this feature was way out of scope for the project and did not implement it.
