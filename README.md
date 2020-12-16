@@ -5,5 +5,5 @@ This is the overview branch that will list general info about projects and their
 
 ### Project # 1: Build a Single Screen App (COMPLETE) - [SingleScreenWaniKani](https://github.com/gferiancek/ADND/tree/SingleScreenWaniKani_Master)
 
-### Project # 2: Build a Single Screen App (WORK IN PROGRESS) - [BaseballTracker](https://github.com/gferiancek/ADND/tree/BaseballTracker_Master)
+### Project # 2: Build a Single Screen App (SUBMITTED) - [BaseballTracker](https://github.com/gferiancek/ADND/tree/BaseballTracker_Master)
 
