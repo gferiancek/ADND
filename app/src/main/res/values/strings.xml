@@ -12,4 +12,35 @@
     <string name="dev_button">Jump to 9th Inning</string>
 
     <string name="game_is_over">The game is over, so you cannot add any more statistics.  Please use the restart button if you want to play another game.</string>
+
+    <string name="away">away</string>
+    <string name="home">home</string>
+
+    <string name="current_inning">current inning</string>
+    <string name="default_textview_value">0</string>
+    <string name="hit">hit</string>
+    <string name="error">error</string>
+    <string name="strike">strike</string>
+    <string name="out">out</string>
+    <string name="ball">ball</string>
+
+    <string name="add_hit">add hit</string>
+    <string name="add_run">add run</string>
+    <string name="add_error">add error</string>
+    <string name="add_strike">add strike</string>
+    <string name="add_out">add out</string>
+    <string name="add_ball">add ball</string>
+    <string name="away_hit">away_hit</string>
+    <string name="away_run">away_run</string>
+    <string name="away_error">away_error</string>
+    <string name="away_strike">away_strike</string>
+    <string name="away_out">away_out</string>
+    <string name="away_ball">away_ball</string>
+    <string name="home_hit">home_hit</string>
+    <string name="home_run">home_run</string>
+    <string name="home_error">home_error</string>
+    <string name="home_strike">home_strike</string>
+    <string name="home_out">home_out</string>
+    <string name="home_ball">home_ball</string>
+
 </resources>

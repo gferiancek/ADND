@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:text="Away"
+            android:text="@string/away"
             android:textSize="18sp"
             style="@style/scoreboardHeader"
             android:layout_marginBottom="8dp"
@@ -35,7 +35,7 @@
             android:layout_alignParentStart="true"
             android:layout_below="@id/away_textview"
             android:textSize="18sp"
-            android:text="Home"
+            android:text="@string/home"
             style="@style/scoreboardHeader"
             android:layout_marginStart="8dp" />
 
@@ -101,12 +101,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Current Inning"
+            android:text="@string/current_inning"
             android:textSize="20sp"
             android:layout_marginTop="8dp"
             android:textAllCaps="true"
             android:textColor="@color/black"
-            android:background="@color/white"/>
+            android:background="@color/white" />
 
         <LinearLayout
             android:background="@color/white"
@@ -128,243 +128,241 @@
                     android:layout_height="wrap_content"
                     android:text="Away"
                     android:textAllCaps="true"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp" />
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:gravity="center_vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="8dp"
-                        android:paddingEnd="8dp"
-                        android:text="Hit"
-                        android:gravity="center"
-                        android:textAllCaps="true" />
-
-                        <TextView
-                            android:id="@+id/away_hit_textview"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textSize="20sp"/>
-
-                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/away_run_textview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
-                        android:textSize="60sp" />
+                        android:text="@string/default_textview_value"
+                        android:textSize="60sp"
+                        android:layout_centerHorizontal="true" />
 
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:gravity="center_vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:paddingStart="8dp"
-                            android:paddingEnd="8dp"
-                            android:text="Error"
-                            android:gravity="center"
-                            android:textAllCaps="true" />
-
-                        <TextView
-                            android:id="@+id/away_error_textview"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textSize="20sp"/>
-
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <LinearLayout
+                    <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/hit"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/away_run_textview"
+                        android:layout_above="@id/away_hit_textview"/>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Strike"
-                            android:gravity="center_horizontal"
-                            android:textAllCaps="true" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" >
-
-                        <ImageView
-                            android:id="@+id/away_strike_1"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_baseline_clear_24"
-                            android:layout_weight="1"
-                            android:paddingStart="8dp"
-                            android:paddingEnd="0dp"/>
-
-                        <ImageView
-                            android:id="@+id/away_strike_2"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_baseline_clear_24"
-                            android:paddingStart="0dp"
-                            android:paddingEnd="8dp"/>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <TextView
+                        android:id="@+id/away_hit_textview"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:gravity="center"
+                        android:text="@string/default_textview_value"
+                        android:textSize="20sp"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/away_run_textview"
+                        android:layout_above="@id/away_image_statistic_container" />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Out"
-                            android:textAllCaps="true"
-                            android:gravity="center_horizontal"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" >
-
-                        <ImageView
-                            android:id="@+id/away_out_1"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_baseline_clear_24"
-                            android:layout_weight="1"
-                            android:paddingStart="8dp"
-                            android:paddingEnd="0dp"/>
-
-                        <ImageView
-                            android:id="@+id/away_out_2"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_baseline_clear_24"
-                            android:layout_weight="1"
-                            android:paddingStart="0dp"
-                            android:paddingEnd="8dp"/>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/error"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:layout_toEndOf="@id/away_run_textview"
+                        android:layout_alignParentEnd="true"
+                        android:layout_above="@id/away_error_textview"/>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Ball"
-                            android:textAllCaps="true" />
+                    <TextView
+                        android:id="@+id/away_error_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/default_textview_value"
+                        android:textSize="20sp"
+                        android:layout_toEndOf="@id/away_run_textview"
+                        android:layout_alignParentEnd="true"
+                        android:layout_above="@id/away_image_statistic_container"/>
+
+                    <LinearLayout
+                        android:id="@+id/away_image_statistic_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/away_run_textview">
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:id="@+id/away_ball_1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_baseline_clear_24"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1"
+                            android:orientation="vertical">
 
-                        <ImageView
-                            android:id="@+id/away_ball_2"
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/strike"
+                                android:gravity="center_horizontal"
+                                android:textAllCaps="true" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/away_strike_1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_baseline_clear_24"
+                                    android:layout_weight="1"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="0dp" />
+
+                                <ImageView
+                                    android:id="@+id/away_strike_2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/ic_baseline_clear_24"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="8dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_baseline_clear_24"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1"
+                            android:orientation="vertical">
 
-                        <ImageView
-                            android:id="@+id/away_ball_3"
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/out"
+                                android:textAllCaps="true"
+                                android:gravity="center_horizontal" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/away_out_1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_baseline_clear_24"
+                                    android:layout_weight="1"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="0dp" />
+
+                                <ImageView
+                                    android:id="@+id/away_out_2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_baseline_clear_24"
+                                    android:layout_weight="1"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="8dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_baseline_clear_24"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/ball"
+                                android:textAllCaps="true" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/away_ball_1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_baseline_clear_24"
+                                    android:layout_weight="1" />
+
+                                <ImageView
+                                    android:id="@+id/away_ball_2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_baseline_clear_24"
+                                    android:layout_weight="1" />
+
+                                <ImageView
+                                    android:id="@+id/away_ball_3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_baseline_clear_24"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
+                </RelativeLayout>
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Add Run"
+                    android:text="@string/add_run"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    android:tag="away_run"
-                    android:onClick="updateStatistic"/>
+                    android:tag="@string/away_run"
+                    android:onClick="updateStatistic" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Add Hit"
+                    android:text="@string/add_hit"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    android:tag="away_hit"
-                    android:onClick="updateStatistic"/>
+                    android:tag="@string/away_hit"
+                    android:onClick="updateStatistic" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Add Error"
+                    android:text="@string/add_error"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    android:tag="away_error"
-                    android:onClick="updateStatistic"/>
+                    android:tag="@string/away_error"
+                    android:onClick="updateStatistic" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="add Strike"
+                    android:text="@string/add_strike"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    android:tag="away_strike"
-                    android:onClick="updateStatistic"/>
+                    android:tag="@string/away_strike"
+                    android:onClick="updateStatistic" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Add Out"
+                    android:text="@string/add_out"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    android:tag="away_out"
-                    android:onClick="updateStatistic"/>
+                    android:tag="@string/away_out"
+                    android:onClick="updateStatistic" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Add Ball"
+                    android:text="@string/add_ball"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    android:tag="away_ball"
-                    android:onClick="updateStatistic"/>
+                    android:tag="@string/away_ball"
+                    android:onClick="updateStatistic" />
 
             </LinearLayout>
 
@@ -376,7 +374,7 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" >
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -389,75 +387,73 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Home"
+                        android:text="@string/home"
                         android:textAllCaps="true"
                         android:textSize="20sp" />
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:gravity="center_vertical">
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:paddingStart="8dp"
-                                android:paddingEnd="8dp"
-                                android:text="Hit"
-                                android:gravity="center"
-                                android:textAllCaps="true" />
+                    <TextView
+                        android:id="@+id/home_run_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/default_textview_value"
+                        android:textSize="60sp"
+                        android:layout_centerHorizontal="true" />
 
-                            <TextView
-                                android:id="@+id/home_hit_textview"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="0"
-                                android:textSize="20sp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/hit"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/home_run_textview"
+                        android:layout_above="@id/home_hit_textview"/>
 
-                        </LinearLayout>
+                    <TextView
+                        android:id="@+id/home_hit_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/default_textview_value"
+                        android:textSize="20sp"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/home_run_textview"
+                        android:layout_above="@id/home_image_statistic_container" />
 
-                        <TextView
-                            android:id="@+id/home_run_textview"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="0"
-                            android:textSize="60sp" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/error"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:layout_toEndOf="@id/home_run_textview"
+                        android:layout_alignParentEnd="true"
+                        android:layout_above="@id/home_error_textview"/>
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:gravity="center_vertical">
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:paddingStart="8dp"
-                                android:paddingEnd="8dp"
-                                android:text="Error"
-                                android:gravity="center"
-                                android:textAllCaps="true" />
-
-                            <TextView
-                                android:id="@+id/home_error_textview"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="0"
-                                android:textSize="20sp"/>
-
-                        </LinearLayout>
-                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/home_error_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/default_textview_value"
+                        android:textSize="20sp"
+                        android:layout_toEndOf="@id/home_run_textview"
+                        android:layout_alignParentEnd="true"
+                        android:layout_above="@id/home_image_statistic_container"/>
 
                     <LinearLayout
+                        android:id="@+id/home_image_statistic_container"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/home_run_textview">
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -468,13 +464,13 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Strike"
+                                android:text="@string/strike"
                                 android:gravity="center_horizontal"
                                 android:textAllCaps="true" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" >
+                                android:layout_height="wrap_content">
 
                                 <ImageView
                                     android:id="@+id/home_strike_1"
@@ -483,7 +479,7 @@
                                     android:src="@drawable/ic_baseline_clear_24"
                                     android:layout_weight="1"
                                     android:paddingStart="8dp"
-                                    android:paddingEnd="0dp"/>
+                                    android:paddingEnd="0dp" />
 
                                 <ImageView
                                     android:id="@+id/home_strike_2"
@@ -492,7 +488,7 @@
                                     android:layout_weight="1"
                                     android:src="@drawable/ic_baseline_clear_24"
                                     android:paddingStart="0dp"
-                                    android:paddingEnd="8dp"/>
+                                    android:paddingEnd="8dp" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -505,13 +501,13 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Out"
+                                android:text="@string/out"
                                 android:textAllCaps="true"
-                                android:gravity="center_horizontal"/>
+                                android:gravity="center_horizontal" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" >
+                                android:layout_height="wrap_content">
 
                                 <ImageView
                                     android:id="@+id/home_out_1"
@@ -520,7 +516,7 @@
                                     android:src="@drawable/ic_baseline_clear_24"
                                     android:layout_weight="1"
                                     android:paddingStart="8dp"
-                                    android:paddingEnd="0dp"/>
+                                    android:paddingEnd="0dp" />
 
                                 <ImageView
                                     android:id="@+id/home_out_2"
@@ -529,7 +525,7 @@
                                     android:src="@drawable/ic_baseline_clear_24"
                                     android:layout_weight="1"
                                     android:paddingStart="0dp"
-                                    android:paddingEnd="8dp"/>
+                                    android:paddingEnd="8dp" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -543,7 +539,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:text="Ball"
+                                android:text="@string/ball"
                                 android:textAllCaps="true" />
 
                             <LinearLayout
@@ -555,78 +551,79 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:src="@drawable/ic_baseline_clear_24"
-                                    android:layout_weight="1"/>
+                                    android:layout_weight="1" />
 
                                 <ImageView
                                     android:id="@+id/home_ball_2"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:src="@drawable/ic_baseline_clear_24"
-                                    android:layout_weight="1"/>
+                                    android:layout_weight="1" />
 
                                 <ImageView
                                     android:id="@+id/home_ball_3"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:src="@drawable/ic_baseline_clear_24"
-                                    android:layout_weight="1"/>
+                                    android:layout_weight="1" />
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
+                    </RelativeLayout>
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Add Run"
+                        android:text="@string/add_run"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp"
-                        android:tag="home_run"
-                        android:onClick="updateStatistic"/>
+                        android:tag="@string/home_run"
+                        android:onClick="updateStatistic" />
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Add Hit"
+                        android:text="@string/add_hit"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp"
-                        android:tag="home_hit"
-                        android:onClick="updateStatistic"/>
+                        android:tag="@string/home_hit"
+                        android:onClick="updateStatistic" />
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Add Error"
+                        android:text="@string/add_error"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp"
-                        android:tag="home_error"
-                        android:onClick="updateStatistic"/>
+                        android:tag="@string/home_error"
+                        android:onClick="updateStatistic" />
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="add Strike"
+                        android:text="@string/add_strike"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp"
-                        android:tag="home_strike"
-                        android:onClick="updateStatistic"/>
+                        android:tag="@string/home_strike"
+                        android:onClick="updateStatistic" />
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Add Out"
+                        android:text="@string/add_out"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp"
-                        android:tag="home_out"
-                        android:onClick="updateStatistic"/>
+                        android:tag="@string/home_out"
+                        android:onClick="updateStatistic" />
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Add Ball"
+                        android:text="@string/add_ball"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp"
-                        android:tag="home_ball"
-                        android:onClick="updateStatistic"/>
+                        android:tag="@string/home_ball"
+                        android:onClick="updateStatistic" />
 
                 </LinearLayout>
 
@@ -637,26 +634,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <Button
-        android:id="@+id/restart_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/restart"
-        android:layout_gravity="center_horizontal"
-        android:visibility="invisible"
-        android:onClick="restartGame"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_weight="1"/>
 
-    <Button
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/dev_button"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_weight="1"
-        android:onClick="jumpToNinthInning"/>
+        <Button
+            android:id="@+id/restart_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/restart"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible"
+            android:onClick="restartGame"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dev_button"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:onClick="jumpToNinthInning" />
     </LinearLayout>
 
 </LinearLayout>

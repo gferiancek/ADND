@@ -1,5 +1,6 @@
 package com.example.baseballtracker;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewTreeObserver;
@@ -19,6 +20,24 @@ import static android.view.View.VISIBLE;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Constants
+    public static final int TOTAL_RUNS_POSITION = 10;
+    public static final int TOTAL_HITS_POSITION = 11;
+    public static final int TOTAL_ERRORS_POSITION = 12;
+    public static final ArrayList<String> STARTING_HEADER_DATA = new ArrayList<>(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "", "R", "H", "E"));
+    public static final ArrayList<String> STARTING_INNING_DATA = new ArrayList<>(Arrays.asList("_", "_", "_", "_", "_", "_", "_", "_", "_", "", "0", "0", "0"));
+    public static final String AWAY_HIT = "away_hit";
+    public static final String AWAY_RUN = "away_run";
+    public static final String AWAY_ERROR = "away_error";
+    public static final String AWAY_STRIKE = "away_strike";
+    public static final String AWAY_OUT = "away_out";
+    public static final String AWAY_BALL = "away_ball";
+    public static final String HOME_HIT = "home_hit";
+    public static final String HOME_RUN = "home_run";
+    public static final String HOME_ERROR = "home_error";
+    public static final String HOME_STRIKE = "home_strike";
+    public static final String HOME_OUT = "home_out";
+    public static final String HOME_BALL = "home_ball";
     // RecyclerView Components
     RecyclerView headerRecyclerView;
     RecyclerView topRecyclerView;
@@ -73,17 +92,12 @@ public class MainActivity extends AppCompatActivity {
     ImageView homeBallThree;
 
     // Scoreboard Components
-    public static final int TOTAL_RUNS_POSITION = 10;
-    public static final int TOTAL_HITS_POSITION = 11;
-    public static final int TOTAL_ERRORS_POSITION = 12;
     int awayTotalRuns;
     int awayTotalHits;
     int awayTotalErrors;
     int homeTotalRuns;
     int homeTotalHits;
     int homeTotalErrors;
-    public static final ArrayList<String> STARTING_HEADER_DATA = new ArrayList<>(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "", "R", "H", "E"));
-    public static final ArrayList<String> STARTING_INNING_DATA = new ArrayList<>(Arrays.asList("_", "_", "_", "_", "_", "_", "_", "_", "_", "", "0", "0", "0"));
     ArrayList<String> headerData = new ArrayList<>();
     ArrayList<String> awayData = new ArrayList<>();
     ArrayList<String> homeData = new ArrayList<>();
@@ -139,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
         awayBallTwo = findViewById(R.id.away_ball_2);
         awayBallThree = findViewById(R.id.away_ball_3);
 
+
         // Gets a handle on Home views
         homeHitTextView = findViewById(R.id.home_hit_textview);
         homeRunTextView = findViewById(R.id.home_run_textview);
@@ -150,6 +165,9 @@ public class MainActivity extends AppCompatActivity {
         homeBallOne = findViewById(R.id.home_ball_1);
         homeBallTwo = findViewById(R.id.home_ball_2);
         homeBallThree = findViewById(R.id.home_ball_3);
+        // I was reading about Kotlin and found out you can directly access views by their id! Imagine
+        // only typing awayHitTextView.text = "" and never using findViewById again! Looking forward to
+        // starting the Kotlin course after this one :) (There is ButterKnife.. but Kotlin is even better!)
 
         // Get a handle on colors commonly used in the program
         red_500 = getResources().getColor(R.color.red_500);
@@ -169,27 +187,27 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, getString(R.string.game_is_over), Toast.LENGTH_SHORT).show();
         } else if (isTopInning) {
             switch (buttonIdentifier) {
-                case "away_hit":
+                case AWAY_HIT:
                     awayCurrentHits++;
                     awayHitTextView.setText(String.valueOf(awayCurrentHits));
                     break;
-                case "away_run":
+                case AWAY_RUN:
                     awayCurrentRuns++;
                     awayRunTextView.setText(String.valueOf(awayCurrentRuns));
                     break;
-                case "away_error":
+                case AWAY_ERROR:
                     awayCurrentErrors++;
                     awayErrorTextView.setText(String.valueOf(awayCurrentErrors));
                     break;
-                case "away_strike":
+                case AWAY_STRIKE:
                     awayStrikeCount++;
                     displayImageStatistic(buttonIdentifier, awayStrikeCount);
                     break;
-                case "away_out":
+                case AWAY_OUT:
                     awayOutCount++;
                     displayImageStatistic(buttonIdentifier, awayOutCount);
                     break;
-                case "away_ball":
+                case AWAY_BALL:
                     awayBallCount++;
                     displayImageStatistic(buttonIdentifier, awayBallCount);
                     break;
@@ -200,26 +218,27 @@ public class MainActivity extends AppCompatActivity {
             }
         } else {
             switch (buttonIdentifier) {
-                case "home_hit":
+                case HOME_HIT:
                     homeCurrentHits++;
                     homeHitTextView.setText(String.valueOf(homeCurrentHits));
-                case "home_run":
+                    break;
+                case HOME_RUN:
                     homeCurrentRuns++;
                     homeRunTextView.setText(String.valueOf(homeCurrentRuns));
                     break;
-                case "home_error":
+                case HOME_ERROR:
                     homeCurrentErrors++;
                     homeErrorTextView.setText(String.valueOf(homeCurrentErrors));
                     break;
-                case "home_strike":
+                case HOME_STRIKE:
                     homeStrikeCount++;
                     displayImageStatistic(buttonIdentifier, homeStrikeCount);
                     break;
-                case "home_out":
+                case HOME_OUT:
                     homeOutCount++;
                     displayImageStatistic(buttonIdentifier, homeOutCount);
                     break;
-                case "home_ball":
+                case HOME_BALL:
                     homeBallCount++;
                     displayImageStatistic(buttonIdentifier, homeBallCount);
                     break;
@@ -232,7 +251,11 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Function used to display Current Inning Statistics to their respective ImageViews. Red_500 color
-     * shows an active state, while gray_500_light is used to show an inactive state.
+     * shows an active state, while gray_500_light is used to show an inactive state. NOTE: This helper
+     * function is slightly redundant as it runs through all of the cases again, however, it allows me
+     * to use reflection when one value causes another to increase. (i.e. when getting a third strike,
+     * I can increment outs and rerun the function.  If the switches were added to updateStatistics, that
+     * reflection wouldn't be possible.
      *
      * @param tag   is passed in from the addStatistics function, and is used to determine which group of
      *              ImageViews we are currently working with.
@@ -244,7 +267,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void displayImageStatistic(String tag, int value) {
         switch (tag) {
-            case "away_strike":
+            case AWAY_STRIKE:
                 switch (value) {
                     case 1:
                         awayStrikeOne.setColorFilter(red_500);
@@ -256,11 +279,11 @@ public class MainActivity extends AppCompatActivity {
                         resetAwayStrikes();
                         resetAwayBalls();
                         awayOutCount++;
-                        displayImageStatistic("away_out", awayOutCount);
+                        displayImageStatistic(AWAY_OUT, awayOutCount);
                         break;
                 }
                 break;
-            case "away_out":
+            case AWAY_OUT:
                 switch (value) {
                     case 1:
                         awayOutOne.setColorFilter(red_500);
@@ -280,7 +303,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                 }
                 break;
-            case "away_ball":
+            case AWAY_BALL:
                 switch (value) {
                     case 1:
                         awayBallOne.setColorFilter(red_500);
@@ -294,11 +317,11 @@ public class MainActivity extends AppCompatActivity {
                     case 4:
                         resetAwayBalls();
                         awayStrikeCount++;
-                        displayImageStatistic("away_strike", awayStrikeCount);
+                        displayImageStatistic(AWAY_STRIKE, awayStrikeCount);
                         break;
                 }
                 break;
-            case "home_strike":
+            case HOME_STRIKE:
                 switch (value) {
                     case 1:
                         homeStrikeOne.setColorFilter(red_500);
@@ -310,11 +333,11 @@ public class MainActivity extends AppCompatActivity {
                         resetHomeStrikes();
                         resetHomeBalls();
                         homeOutCount++;
-                        displayImageStatistic("home_out", homeOutCount);
+                        displayImageStatistic(HOME_OUT, homeOutCount);
                         break;
                 }
                 break;
-            case "home_out":
+            case HOME_OUT:
                 switch (value) {
                     case 1:
                         homeOutOne.setColorFilter(red_500);
@@ -334,7 +357,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                 }
                 break;
-            case "home_ball":
+            case HOME_BALL:
                 switch (value) {
                     case 1:
                         homeBallOne.setColorFilter(red_500);
@@ -548,7 +571,8 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Dev function to jump to the ninth inning.  Implemented so that you don't need to hit the add out
-     * button 54 times every time you want to test a different part of the isGameOver logic. :)
+     * button 54 times every time you want to test a different part of the isGameOver logic. I left it in
+     * since I figured it would be useful for the reviewer! :)
      */
     public void jumpToNinthInning(View view) {
         removeFocus();
