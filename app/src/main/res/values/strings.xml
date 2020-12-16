@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">BaseballTracker</string>
+
+    <string name="away_not_at_bat">The home team is currently at bat.  Cannot edit statistics for the away team.</string>
+    <string name="home_not_at_bat">The away team is currently at bat.  Cannot edit statistics for the home team.</string>
+
+    <string name="home_wins">The home team has won!</string>
+    <string name="away_wins">The away team has won!</string>
+    <string name="tie_game">The game ended in a tie!</string>
+
+    <string name="restart">Restart Game</string>
+    <string name="dev_button">Jump to 9th Inning</string>
+
+    <string name="game_is_over">The game is over, so you cannot add any more statistics.  Please use the restart button if you want to play another game.</string>
 </resources>
