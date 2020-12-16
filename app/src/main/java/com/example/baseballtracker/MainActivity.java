@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String HOME_STRIKE = "home_strike";
     public static final String HOME_OUT = "home_out";
     public static final String HOME_BALL = "home_ball";
+
     // RecyclerView Components
     RecyclerView headerRecyclerView;
     RecyclerView topRecyclerView;
@@ -53,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
     int currentInning = 1;
     boolean isTopInning = true;
     boolean isGameOver;
-
 
     // Current Inning Components
     int awayCurrentHits;
@@ -371,7 +371,7 @@ public class MainActivity extends AppCompatActivity {
                     case 4:
                         resetHomeBalls();
                         homeStrikeCount++;
-                        displayImageStatistic("home_strike", homeStrikeCount);
+                        displayImageStatistic(HOME_STRIKE, homeStrikeCount);
                         break;
                 }
                 break;
