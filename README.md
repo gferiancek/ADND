@@ -2,7 +2,7 @@
 Project #3 Build a Quiz App on a topic you are knowledgable about.
 =======
 ## 1.  First project using view binding.
-- [ ] Setup and experiment before diving into project.
+- [x] Setup and experiment before diving into project.
 ## 2. Design the basic layout for title screen and quiz screen
 - [ ] Title Screen
 - [ ] Quiz screen
