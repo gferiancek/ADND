@@ -1,3 +1,595 @@
 <resources>
     <string name="app_name">Who Wants to be a Mirannaire</string>
+
+    // Strings used for the title screen
+    <string name="rules">view rules</string>
+    <string name="difficulty">Difficulty</string>
+    <string name="normal">normal</string>
+    <string name="hard">hard</string>
+    <string name="brutal">brutal</string>
+    <string name="manic">maniac</string>
+    <string name="rules_title">Who Wants To Be A Mirannaire Rules</string>
+    <string name="rules_message">Each round contains ten multiple choice questions.  Choose the right
+        answer for each of them within the allotted time to win.\n\nChoosing a wrong answer or running
+        out of time on a question will darken one of the circles at the top of the screen.  When all
+        three of them turn gray you will lose the round.\n\nTap of the difficulty of your choice to begin.
+        Higher difficulties will naturally have harder questions, but they also have a higher score multiplier.
+        Will you risk losing all of your circles for a chance at the high score?\n\nOh, and before I go,
+        if you manage to reach the end with at least two of your circles intact, you\'ll receive a bonus
+        question about yours truly for a chance at even more points!\n~ Campanella</string>
+
+    // Normal questions and answers
+    <string name="normal_question_1">What\'s the last name of our ultra-dependable protagonist, Estelle?</string>
+    <string-array name="normal_answers_1">
+        <item>Astray</item>
+        <item>Bright</item>
+        <item>Harvey</item>
+        <item>Rinz</item>
+    </string-array>
+    <string name="normal_correct_answer_1">Bright</string>
+    <string name="normal_question_2">What\'s the first name of Estelle\'s late mother?</string>
+    <string-array name="normal_answers_2">
+        <item>Hannah</item>
+        <item>Stella</item>
+        <item>Lena</item>
+        <item>Tabitha</item>
+    </string-array>
+    <string name="normal_correct_answer_2">Lena</string>
+    <string name="normal_question_3">What\'s the name of harmonica-playing heartthrob Joshua\'s blood-related sister?</string>
+    <string-array name="normal_answers_3">
+        <item>Estelle</item>
+        <item>Scherazard</item>
+        <item>Luciola</item>
+        <item>Karin</item>
+    </string-array>
+    <string name="normal_correct_answer_3">Karin</string>
+    <string name="normal_question_4">What\'s the first name of softer-than-he-looks bracer Agate\'s late sister?</string>
+    <string-array name="normal_answers_4">
+        <item>Millia</item>
+        <item>Mischa</item>
+        <item>Aisha</item>
+        <item>Tita</item>
+    </string-array>
+    <string name="normal_correct_answer_4">Mischa</string>
+    <string name="normal_question_5">What is the color of \'Cuteness is justice!\' advocate Anelace\'s hair ribbon?</string>
+    <string-array name="normal_answers_5">
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Red</item>
+        <item>Blue</item>
+    </string-array>
+    <string name="normal_correct_answer_5">Yellow</string>
+    <string name="normal_question_6">What branch of the Bracer Guild is cuteness maniac Anelace attached to?</string>
+    <string-array name="normal_answers_6">
+        <item>Rolent Branch</item>
+        <item>Ruan Branch</item>
+        <item>Grancel Branch</item>
+        <item>Bose Branch</item>
+    </string-array>
+    <string name="normal_correct_answer_6">Bose Branch</string>
+    <string name="normal_question_7">What relation is Duke Dunan to Queen Alicia?</string>
+    <string-array name="normal_answers_7">
+        <item>Her Brother</item>
+        <item>Her Son</item>
+        <item>Her Nephew</item>
+        <item>Her Retainer</item>
+    </string-array>
+    <string name="normal_correct_answer_7">Her Nephew</string>
+    <string name="normal_question_8">What\'s the first name of Prince Olivert\'s father, the current reigning emperor of Erebonia?</string>
+    <string-array name="normal_answers_8">
+        <item>Judis</item>
+        <item>Eugent</item>
+        <item>Rocksmith</item>
+        <item>Giliath</item>
+    </string-array>
+    <string name="normal_question_9">What\'s the name of the large lake situated in the center of Liberl?</string>
+    <string-array name="normal_answers_9">
+        <item>Erebonia Lake</item>
+        <item>Ballerina Lake</item>
+        <item>Falleria Lake</item>
+        <item>Valleria Lake</item>
+    </string-array>
+    <string name="normal_question_10">What\'s the name of the vast area of woodland in the southeastern part of the Rolent region?</string>
+    <string-array name="normal_answers_10">
+        <item>Mistwald</item>
+        <item>Mistforesta</item>
+        <item>Mistworld</item>
+        <item>Mistforet</item>
+    </string-array>
+    <string name="normal_question_11">What was the name that Captain Schwarz went by when disguised as a sister during the first game\'s finale?</string>
+    <string-array name="normal_answers_11">
+        <item>Sister Ellen</item>
+        <item>Sister Rosa</item>
+        <item>Sister Frieda</item>
+        <item>Sister Noah</item>
+    </string-array>
+    <string name="normal_question_12">What did Estelle ask her parents for during the dream sequence in Second Chapter, Chapter 4?</string>
+    <string-array name="normal_answers_12">
+        <item>Money</item>
+        <item>Strega\'s Latest Sneakers</item>
+        <item>A Sibling</item>
+        <item>A Harmonica</item>
+    </string-array>
+    <string name="normal_question_13">What\'s the name of hardcore sneaker collector Estelle\'s favorite brand?</string>
+    <string-array name="normal_answers_13">
+        <item>Strega Corporation</item>
+        <item>Verne Company</item>
+        <item>Reinford Company</item>
+        <item>Liberl News Service</item>
+    </string-array>
+    <string name="normal_question_14">What\'s the name of the now-deceased father of Kilika, the woman in charge of Zeiss\' Bracer Guild branch?</string>
+    <string-array name="normal_answers_14">
+        <item>Zin</item>
+        <item>Tact</item>
+        <item>Yakumo</item>
+        <item>Ryuga</item>
+    </string-array>
+    <string name="normal_question_15">What\'s the name of the Bracer Guild training facility situated in Leman State?</string>
+    <string-array name="normal_answers_15">
+        <item>Le Locle</item>
+        <item>Liber Ark</item>
+        <item>Le Sage</item>
+        <item>Air-Letten</item>
+    </string-array>
+    <string name="normal_question_16">What\'s the name of black-haired darling Joshua\'s most-played harmonica song?</string>
+    <string-array name="normal_answers_16">
+        <item>The Whereabouts of Freedom</item>
+        <item>The Whereabouts of Harmony</item>
+        <item>The Whereabouts of Light</item>
+        <item>The Whereabouts of Hope</item>
+    </string-array>
+    <string name="normal_question_17">What\'s the name of the huge drawbridge that connects the north and south sides of Ruan City?</string>
+    <string-array name="normal_answers_17">
+        <item>Rembrandt Bridge</item>
+        <item>Deodorant Bridge</item>
+        <item>Langland Bridge</item>
+        <item>Giant Bridge</item>
+    </string-array>
+    <string name="normal_question_18">What\'s the name of the Aureole guardian which the party fight in the Sealed Area at the end of the first game?</string>
+    <string-array name="normal_answers_18">
+        <item>Reverie</item>
+        <item>Revealer</item>
+        <item>Dreamer</item>
+        <item>Nightmare</item>
+    </string-array>
+    <string name="normal_question_19">What is depicted on the emblem of the Erebonian Empire?</string>
+    <string-array name="normal_answers_19">
+        <item>Golden Cock</item>
+        <item>Golden Lion</item>
+        <item>Golden Hound</item>
+        <item>Golden Stallion</item>
+    </string-array>
+    <string name="normal_question_20">What was the name of the play performed at the festival held in Jenis Royal Academy in the first game, Chapter 2?</string>
+    <string-array name="normal_answers_20">
+        <item>Mandolin of the White Magnolia</item>
+        <item>Madrigal of the White Magnolia</item>
+        <item>Minuet of the White Magnolia</item>
+        <item>Musette of the White Magnolia</item>
+    </string-array>
+
+    // Hard questions and answers
+    <string name="hard_question_1">What\'s the number of Ouroboros Enforcer Bleublanc, the Phantom Thief?</string>
+    <string-array name="hard_answers_1">
+        <item>No. X</item>
+        <item>No. XIII</item>
+        <item>No. XI</item>
+        <item>No. IX</item>
+    </string-array>
+    <string name="hard_question_2">What\'s the number of Ouroboros Enforcer Luciola, the Bewitching Bell?</string>
+    <string-array name="hard_answers_2">
+        <item>No. V</item>
+        <item>No. VI</item>
+        <item>No. IV</item>
+        <item>No. VII</item>
+    </string-array>
+    <string name="hard_question_3">What\'s the number of Ouroboros Enforcer Walter, the Direwolf?</string>
+    <string-array name="hard_answers_3">
+        <item>No. VII</item>
+        <item>No. IX</item>
+        <item>No. VIII</item>
+        <item>No. III</item>
+    </string-array>
+    <string name="hard_question_4">What\'s the number of Ouroboros Enforcer Renne, the Angel of Slaughter?</string>
+    <string-array name="hard_answers_4">
+        <item>No. XIII</item>
+        <item>No. XIV</item>
+        <item>No. XVI</item>
+        <item>No. XV</item>
+    </string-array>
+    <string name="hard_question_5">What was the number of Ouroboros Enforcer Joshua, the Black Fang?</string>
+    <string-array name="hard_answers_5">
+        <item>No. IX</item>
+        <item>No. XIII</item>
+        <item>No. VII</item>
+        <item>No. XII</item>
+    </string-array>
+    <string name="hard_question_6">What\'s the number of Ouroboros Enforcer Leonhardt, the Bladelord?</string>
+    <string-array name="hard_answers_6">
+        <item>No. I</item>
+        <item>No. III</item>
+        <item>No. II</item>
+        <item>No. IV</item>
+    </string-array>
+    <string name="hard_question_7">What is the name of Princess Klaudia\'s late father?</string>
+    <string-array name="hard_answers_7">
+        <item>Judis</item>
+        <item>Dunan</item>
+        <item>Edgar</item>
+        <item>Celeste</item>
+    </string-array>
+    <string name="hard_question_8">What was the name of Liberl\'s previous monarch before Queen Alicia took the throne?</string>
+    <string-array name="hard_answers_8">
+        <item>Dunan</item>
+        <item>Celeste</item>
+        <item>Judis</item>
+        <item>Edgar</item>
+    </string-array>
+    <string name="hard_question_9">How many monarchs has Liberl had since its founding, including the current monarch, Queen Alicia?</string>
+    <string-array name="hard_answers_9">
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+    </string-array>
+    <string name="hard_question_10">Who has the dubious honor of being rejected by both Marsha in Grancel in the first game and Aina in Rolent in Second Chapter?</string>
+    <string-array name="hard_answers_10">
+        <item>Ricky</item>
+        <item>Anton</item>
+        <item>Jimmy</item>
+        <item>Rinon</item>
+    </string-array>
+    <string name="hard_question_11">What is the name of the current president of Calvard?</string>
+    <string-array name="hard_answers_11">
+        <item>Lucksmith</item>
+        <item>Rocksmith</item>
+        <item>Lecksmith</item>
+        <item>Rooksmith</item>
+    </string-array>
+    <string name="hard_question_12">What is the title held by Fisherman\'s Guild member Percy?</string>
+    <string-array name="hard_answers_12">
+        <item>Avid Angler</item>
+        <item>Master Fisher</item>
+        <item>Amateur Fisher</item>
+        <item>Supreme Fisher</item>
+    </string-array>
+    <string name="hard_question_13">What is the name of the elder of the two twins who work in Edel Market in Grancel?</string>
+    <string-array name="hard_answers_13">
+        <item>Kitty</item>
+        <item>Midee</item>
+        <item>Dadee</item>
+        <item>Ladee</item>
+    </string-array>
+    <string name="hard_question_14">Alan, who works at Rolent\'s landing port, has a habit of rating every girl he sees. Which of the following earned 100 points?</string>
+    <string-array name="hard_answers_14">
+        <item>Scherazard</item>
+        <item>Kloe</item>
+        <item>Estelle</item>
+        <item>Tita</item>
+    </string-array>
+    <string name="hard_question_15">What color is the Cecilia, one of the airships that transports people around Liberl?</string>
+    <string-array name="hard_answers_15">
+        <item>Yellow</item>
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Green</item>
+    </string-array>
+    <string name="hard_question_16">What color is the international airship, the Gretna, that connects Liberl and surrounding nations?</string>
+    <string-array name="hard_answers_16">
+        <item>Yellow</item>
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Green</item>
+    </string-array>
+    <string name="hard_question_17">What is the name of the state situated between Erebonia and Calvard that both countries assert ownership of?</string>
+    <string-array name="hard_answers_17">
+        <item>Crossbell State</item>
+        <item>Ored State</item>
+        <item>Leman State</item>
+        <item>North Ambria State</item>
+    </string-array>
+    <string name="hard_question_18">What was the name of the expensive wine that Olivier drank at the Anterose in Chapter 1 of the first game?</string>
+    <string-array name="hard_answers_18">
+        <item>Grand Chardonnay</item>
+        <item>Alan Richard</item>
+        <item>Grand Richard</item>
+        <item>Grand Sharia</item>
+    </string-array>
+    <string name="hard_question_19">What was the meaning of the name Leonhardt offered by Olivier when he encountered him in Second Chapter, Chapter 5?</string>
+    <string-array name="hard_answers_19">
+        <item>Lion-faced</item>
+        <item>Lion-lover</item>
+        <item>Lion-crusher</item>
+        <item>Lion-hearted</item>
+    </string-array>
+    <string name="hard_question_20">What is the major of Jenis Royal Academy student Kloe Rinz?</string>
+    <string-array name="hard_answers_20">
+        <item>Social Studies</item>
+        <item>Natural Sciences</item>
+        <item>Humanities</item>
+        <item>Science and Math</item>
+    </string-array>
+
+    // Brutal questions and answers
+    <string name="brutal_question_1">The Orbal Compatibility Tester at the festival in the first game shows the date on which sweet Estelle was born. When was it?</string>
+    <string-array name="brutal_answers_1">
+        <item>August 7th, 1186</item>
+        <item>September 14th, 1186</item>
+        <item>August 21st, 1186</item>
+        <item>July 7th, 1186</item>
+    </string-array>
+    <string name="brutal_question_2">The Orbal Compatibility Tester at the festival in FC shows the date on which Joshua was born. When was it?</string>
+    <string-array name="brutal_answers_2">
+        <item>December 20th, 1185</item>
+        <item>December 10th, 1186</item>
+        <item>January 20th, 1185</item>
+        <item>January 10th, 1185</item>
+    </string-array>
+    <string name="brutal_question_3">What is the combination to open the road lamp on the Milch Main Road in the quest given to you by Freddy in FC\'s prologue?</string>
+    <string-array name="brutal_answers_3">
+        <item>554818</item>
+        <item>545818</item>
+        <item>544818</item>
+        <item>544828</item>
+    </string-array>
+    <string name="brutal_question_4">Which chapter of The Doll Knight was Bleublanc\'s second card hidden inside during the quest in Second Chapter, Chapter 3?</string>
+    <string-array name="brutal_answers_4">
+        <item>Chapter 13</item>
+        <item>Chapter 14</item>
+        <item>Chapter 15</item>
+        <item>Chapter 16</item>
+    </string-array>
+    <string name="brutal_question_5">What is the name of the late husband of Matron Theresa, who runs Mercia Orphanage in Ruan?</string>
+    <string-array name="brutal_answers_5">
+        <item>George</item>
+        <item>James</item>
+        <item>Joseph</item>
+        <item>John</item>
+    </string-array>
+    <string name="brutal_question_6">What is the name of famed angler and bearer of the Master Fisher rank Lloyd\'s niece?</string>
+    <string-array name="brutal_answers_6">
+        <item>Monika</item>
+        <item>Nikita</item>
+        <item>Reina</item>
+        <item>Thelma</item>
+    </string-array>
+    <string name="brutal_question_7">How many dishes of Imperial cuisine is the head chef at Grancel Castle said to be able to make?</string>
+    <string-array name="brutal_answers_7">
+        <item>Over Ten</item>
+        <item>Over a Thousand</item>
+        <item>Over Ten Thousand</item>
+        <item>Over a Hundred</item>
+    </string-array>
+    <string name="brutal_question_8">Which of the following pairs are not a couple?</string>
+    <string-array name="brutal_answers_8">
+        <item>Ellie and Armand</item>
+        <item>Louise and Ursus</item>
+        <item>Anton and Aina</item>
+        <item>Katrina and Finel</item>
+    </string-array>
+    <string name="brutal_question_9">In the first game\'s Kitty-Talk for Dummies book, what does Nyayayaa～ mean?</string>
+    <string-array name="brutal_answers_9">
+        <item>Hold Up.</item>
+        <item>(An Expression of Delight)</item>
+        <item>(A Yawn)</item>
+        <item>Goodbye.</item>
+    </string-array>
+    <string name="brutal_question_10">In the first game\'s Kitty-Talk for Dummies book, what does Nyaa mean?</string>
+    <string-array name="brutal_answers_10">
+        <item>These nails are bothering me.</item>
+        <item>I\'m hungry.</item>
+        <item>I\'m tired.</item>
+        <item>Yes, that\'s right.</item>
+    </string-array>
+    <string name="brutal_question_11">How many Creepy Sheep take part in the race\'s ultimate technique, Sheep Asura Fuse?</string>
+    <string-array name="brutal_answers_11">
+        <item>Four</item>
+        <item>Five</item>
+        <item>Six</item>
+        <item>Seven</item>
+    </string-array>
+    <string name="brutal_question_12">What\'s the nickname of Deen, the green-haired member of the Raven gang?</string>
+    <string-array name="brutal_answers_12">
+        <item>Broccoli Reaper</item>
+        <item>Parsley Tyrant</item>
+        <item>Spinach Fiend</item>
+        <item>Kelp Demon</item>
+    </string-array>
+    <string name="brutal_question_13">There are a large number of different Pom enemies in the two previous games, but how many varieties are there in total?</string>
+    <string-array name="brutal_answers_13">
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+        <item>Six</item>
+    </string-array>
+    <string name="brutal_question_14">Weissmann\'s S-Craft quote begins with, \'Can you feel it?\' but what does he say after that?</string>
+    <string-array name="brutal_answers_14">
+        <item>The agony…</item>
+        <item>The despair…</item>
+        <item>The desperation…</item>
+        <item>The pleasure…</item>
+    </string-array>
+    <string name="brutal_question_15">Which of the following is the correct description for the Shadow Spear art?</string>
+    <string-array name="brutal_answers_15">
+        <item>A spear that whittles away life.</item>
+        <item>A sword that whittles away life.</item>
+        <item>A needle that whittles away life.</item>
+        <item>A blade that whittles away life.</item>
+    </string-array>
+    <string name="brutal_question_16">Which of these is the beginning of the description for the orbal art Death Scream?</string>
+    <string-array name="brutal_answers_16">
+        <item>Shrill Screech</item>
+        <item>Piercing Cry</item>
+        <item>Harrowing Yell</item>
+        <item>Blood-Curdling Howl</item>
+    </string-array>
+    <string name="brutal_question_17">What\'s the name of the quartz that makes enemies more likely to notice you?</string>
+    <string-array name="brutal_answers_17">
+        <item>Scent</item>
+        <item>Odor</item>
+        <item>Fragrance</item>
+        <item>Perfume</item>
+    </string-array>
+    <string name="brutal_question_18">The Yin-Yang quartz combines the effects of which two others?</string>
+    <string-array name="brutal_answers_18">
+        <item>Heal and Ingenuity</item>
+        <item>Ingenuity and Septium Vein</item>
+        <item>Septium Vein and Haze</item>
+        <item>Haze and Heal</item>
+    </string-array>
+    <string name="brutal_question_19">The quartz \'Heaven\'s Eye\' combines the effects of which two other quartz?</string>
+    <string-array name="brutal_answers_19">
+        <item>Haze and Range</item>
+        <item>Range and Eagle Eye</item>
+        <item>Eagle Eye and Information</item>
+        <item>Information and Haze</item>
+    </string-array>
+    <string name="brutal_question_20">This question relates to Second Chapter. How many fishing spots are there in Liberl in total?</string>
+    <string-array name="brutal_answers_20">
+        <item>26</item>
+        <item>28</item>
+        <item>30</item>
+        <item>32</item>
+    </string-array>
+
+    // Maniac questions and answers
+    <string name="maniac_question_1">What is the origin of the name of Renne\'s S-Craft, Rennede?</string>
+    <string-array name="maniac_answers_1">
+        <item>Renne, Rend and End</item>
+        <item>Renne and Renegade</item>
+        <item>Renne, Need, and End</item>
+        <item>Renne, Rend and Tornado</item>
+    </string-array>
+    <string name="maniac_question_2">What is the name of the vocal track that plays during the credits of FC?</string>
+    <string-array name="maniac_answers_2">
+        <item>Silver Will, Golden Wings</item>
+        <item>Cry For Me, Cry For You</item>
+        <item>I Swear…</item>
+        <item>Whereabouts of Light</item>
+    </string-array>
+    <string name="maniac_question_3">What is the name of the vocal track that plays during the credits of SC?</string>
+    <string-array name="maniac_answers_3">
+        <item>Silver Will, Golden Wings</item>
+        <item>Cry For Me, Cry For You</item>
+        <item>I Swear…</item>
+        <item>Whereabouts of Light</item>
+    </string-array>
+    <string name="maniac_question_4">What is the name of FC\'s final dungeon theme?</string>
+    <string-array name="maniac_answers_4">
+        <item>Brilliant Light of the Dark Land</item>
+        <item>Dazzling Light of the Hidden Land</item>
+        <item>Hollow Light of the Sealed Land</item>
+        <item>Faint Light of the Forgotten Land</item>
+    </string-array>
+    <string name="maniac_question_5">What is the name of the regular battle theme in FC?</string>
+    <string-array name="maniac_answers_5">
+        <item>Sophisticated Fight</item>
+        <item>Sophisticated Sight</item>
+        <item>Sophisticated Tight</item>
+        <item>Sophisticated Night</item>
+    </string-array>
+    <string name="maniac_question_6">What is the name of the regular battle theme in SC?</string>
+    <string-array name="maniac_answers_6">
+        <item>Strawberry Fight</item>
+        <item>Strepitoso Fight</item>
+        <item>Strange Fight</item>
+        <item>Street Fight</item>
+    </string-array>
+    <string name="maniac_question_7">What are the first two words of the SC opening vocal, Silver Will, Golden Wings?</string>
+    <string-array name="maniac_answers_7">
+        <item>Aoi tori</item>
+        <item>Aoi toki</item>
+        <item>Aoi sora</item>
+        <item>Aoi mori</item>
+    </string-array>
+    <string name="maniac_question_8">One arge, a unit of length in the Trails series, is equivalent to how many real-world meters?"</string>
+    <string-array name="maniac_answers_8">
+        <item>1 meter</item>
+        <item>1,000 meters</item>
+        <item>10 meters</item>
+        <item>100 meters</item>
+    </string-array>
+    <string name="maniac_question_9">One selge, a unit of length in the Trails series, is equivalent to how many real-world meters?</string>
+    <string-array name="maniac_answers_9">
+        <item>10 meters</item>
+        <item>100 meters</item>
+        <item>1,000 meters</item>
+        <item>10 kilometers</item>
+    </string-array>
+    <string name="maniac_question_10">One rege, a unit of length in the Trails series, is equivalent to how many real-world meters?</string>
+    <string-array name="maniac_answers_10">
+        <item>1 meter</item>
+        <item>0.1 meters</item>
+        <item>0.001 meters</item>
+        <item>0.01 meters</item>
+    </string-array>
+    <string name="maniac_question_11">One torim, a unit of weight in the Trails series, is equivalent to how many real world kilograms?</string>
+    <string-array name="maniac_answers_11">
+        <item>1 kilogram</item>
+        <item>10 kilograms</item>
+        <item>1000 kilograms</item>
+        <item>100 kilograms</item>
+    </string-array>
+    <string name="maniac_question_12">What is the maximum mira you can have at once?</string>
+    <string-array name="maniac_answers_12">
+        <item>1,000,000,000 mira</item>
+        <item>999,999,999 mira</item>
+        <item>99,999,999 mira</item>
+        <item>9,999,999 mira</item>
+    </string-array>
+    <string name="maniac_question_13">How many different loading screen animations are there in all in FC?</string>
+    <string-array name="maniac_answers_13">
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string name="maniac_question_14">How many different loading screen animations are there in all in the 3rd?</string>
+    <string-array name="maniac_answers_14">
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+    </string-array>
+    <string name="maniac_question_15">What is the maximum playtime that can be displayed on the Camp Menu?</string>
+    <string-array name="maniac_answers_15">
+        <item>199:59:59</item>
+        <item>299:59:59</item>
+        <item>399:59:59</item>
+        <item>499:59:59</item>
+    </string-array>
+    <string name="maniac_question_16">What is the name of the Trails series\' currency?</string>
+    <string-array name="maniac_answers_16">
+        <item>Rose</item>
+        <item>Pia</item>
+        <item>Mira</item>
+        <item>Miro</item>
+    </string-array>
+    <string name="maniac_question_17">Which of these is not part of the lyrics to Olivier\'s beloved tune, Amber Amour?</string>
+    <string-array name="maniac_answers_17">
+        <item>If this fleeting dream shall never be…</item>
+        <item>Our passionate first and final kiss…</item>
+        <item>And the cruel sun mocks my pain…</item>
+        <item>Let us immure this eternal love…</item>
+    </string-array>
+    <string name="maniac_question_18">What is the name of the continent on which the Trails series takes place?</string>
+    <string-array name="maniac_answers_18">
+        <item>Eresia</item>
+        <item>Atlas</item>
+        <item>Zemuria</item>
+        <item>Afroca</item>
+    </string-array>
+    <string name="maniac_question_19">What is the name given to the emblem of the Bracer Guild, a peace-keeping organization?</string>
+    <string-array name="maniac_answers_19">
+        <item>Shielding Armor</item>
+        <item>Protecting Shield</item>
+        <item>Supporting Gauntlet</item>
+        <item>Rending Blade</item>
+    </string-array>
+    <string name="maniac_question_20">Which of the following is not a statistic that appears in the game?</string>
+    <string-array name="maniac_answers_20">
+        <item>ATS (Arts Attack)</item>
+        <item>DEX (Dexterity)</item>
+        <item>MOV (Movement)</item>
+        <item>CHA (Charisma)</item>
+    </string-array>
 </resources>
