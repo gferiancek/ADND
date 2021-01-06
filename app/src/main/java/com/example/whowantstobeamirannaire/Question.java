@@ -1,6 +1,11 @@
 package com.example.whowantstobeamirannaire;
 
-public class Question {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
+
+public class Question implements Parcelable {
 
     private String mQuestion;
     private String[] mAnswerChoices;
@@ -34,5 +39,17 @@ public class Question {
 
     public void setCorrectAnswer(String mCorrectAnswer) {
         this.mCorrectAnswer = mCorrectAnswer;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(mQuestion);
+        dest.writeStringArray(mAnswerChoices);
+        dest.writeString(mCorrectAnswer);
     }
 }

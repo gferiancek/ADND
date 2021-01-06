@@ -25,7 +25,8 @@ import java.util.List;
 public class QuizActivity extends AppCompatActivity {
 
     ActivityQuizBinding binding;
-    QuestionLibrary questionLibrary;
+    ArrayList<Question> questionList = new ArrayList<>();
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,15 +36,22 @@ public class QuizActivity extends AppCompatActivity {
 
         // prepare all of the questions for the selected difficulty
         Intent intent = getIntent();
-        questionLibrary = new QuestionLibrary(this, intent.getStringExtra("difficulty"));
-        List<Question> questionList = questionLibrary.getNormalQuestions();
-        Collections.shuffle(questionList);
-        questionList.subList(10, 19).clear();
-        List<String> answerOnes = new ArrayList<>();
-        for (Question i : questionList) {
-            answerOnes.add(i.getCorrectAnswer());
+        String currentDifficulty = intent.getStringExtra("difficulty");
+        ArrayList<Question> questionList = initializeQuestions(currentDifficulty);
+
+        // Load the initial fragment and start the quiz!
+        Bundle questionBundle = new Bundle();
+        questionBundle.putParcelableArrayList("questionList", questionList);
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setReorderingAllowed(true)
+                    .add(R.id.fragment_container_view, QuestionFragment.class, questionBundle)
+                    .commit();
         }
-        Toast.makeText(this, answerOnes.toString(), Toast.LENGTH_LONG).show();
+
+        // Media Player
+        mediaPlayer = MediaPlayer.create(this, R.raw.arrival_existence);
+        mediaPlayer.start();
     }
 
     @Override
@@ -54,10 +62,10 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Used to enable Sticky Immersive Mode.
+     */
     private void hideSystemUI() {
-        // Enables regular immersive mode.
-        // For "lean back" mode, remove SYSTEM_UI_FLAG_IMMERSIVE.
-        // Or for "sticky immersive," replace it with SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
@@ -69,5 +77,82 @@ public class QuizActivity extends AppCompatActivity {
                         // Hide the nav bar and status bar
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_FULLSCREEN);
+    }
+
+    /**
+     * Function that makes the question objects for each difficutly and adds them into a List.
+     *
+     * @param difficulty  Pulled from the MainActivity to load the questions for the selected difficultly.
+     */
+    private ArrayList<Question> initializeQuestions(String difficulty) {
+        Resources appResources = getResources();
+        switch (difficulty) {
+            case "normal":
+                for (int i = 1; i <= 20; i++) {
+                    int normalQuestionID = appResources.getIdentifier("normal_question_" + i, "string", getPackageName());
+                    int normalChoicesID = appResources.getIdentifier("normal_answers_" + i, "array", getPackageName());
+                    String[] normalChoices = appResources.getStringArray(normalChoicesID);
+                    questionList.add(new Question(getString(normalQuestionID), normalChoices, normalChoices[0]));
+                }
+                break;
+            case "hard":
+                for (int i = 1; i <= 20; i++) {
+                    int hardQuestionID = appResources.getIdentifier("hard_question_" + i, "string", getPackageName());
+                    int hardChoicesID = appResources.getIdentifier("hard_answers_" + i, "array", getPackageName());
+                    String[] hardChoices = appResources.getStringArray(hardChoicesID);
+                    questionList.add(new Question(getString(hardQuestionID), hardChoices, hardChoices[0]));
+                }
+                break;
+            case "brutal":
+                for (int i = 1; i <= 20; i++) {
+                    int brutalQuestionID = appResources.getIdentifier("brutal_question_" + i, "string", getPackageName());
+                    int brutalChoicesID = appResources.getIdentifier("brutal_answers_" + i, "array", getPackageName());
+                    String[] brutalChoices = appResources.getStringArray(brutalChoicesID);
+                    questionList.add(new Question(getString(brutalQuestionID), brutalChoices, brutalChoices[0]));
+                }
+                break;
+            case "maniac":
+                for (int i = 1; i <= 20; i++) {
+                    int maniacQuestionID = appResources.getIdentifier("maniac_question_" + i, "string", getPackageName());
+                    int maniacChoicesID = appResources.getIdentifier("maniac_answers_" + i, "array", getPackageName());
+                    String[] maniacChoices = appResources.getStringArray(maniacChoicesID);
+                    questionList.add(new Question(getString(maniacQuestionID), maniacChoices, maniacChoices[0]));
+                }
+                break;
+        }
+        // Question order is randomized, so we shuffle.  Also only 10 questions per quiz, so we remove
+        // the extra with sublist().clear()
+        Collections.shuffle(questionList);
+        questionList.subList(10, 19).clear();
+        return questionList;
+    }
+
+
+    /**
+     * Next three functions are Overridden to properly handle the mediaPlaer.
+     */
+    @Override
+    protected void onPause() {
+        if (mediaPlayer != null) {
+            mediaPlayer.pause();
+        }
+        super.onPause();
+    }
+
+    @Override
+    protected void onPostResume() {
+        if (mediaPlayer != null) {
+            mediaPlayer.start();
+        }
+        super.onPostResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+        super.onDestroy();
     }
 }

@@ -11,10 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#fff4c9"
+        android:background="@color/light_yellow"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:elevation="2dp">
+        android:elevation="5dp">
 
         <TextView
             android:id="@+id/title_1_textview"
@@ -70,8 +70,8 @@
         android:layout_weight="2.5"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="#fff4c9"
-        android:elevation="2dp">
+        android:background="@color/light_yellow"
+        android:elevation="5dp">
 
         <ImageView
             android:id="@+id/imageview"
@@ -117,7 +117,8 @@
                 android:layout_marginBottom="@dimen/medium_margin"
                 android:layout_marginStart="@dimen/extra_small_margin"
                 android:layout_marginEnd="@dimen/extra_small_margin"
-                android:onClick="launchQuizActivity"/>
+                android:onClick="launchQuizActivity"
+                android:tag="@string/normal"/>
 
             <Button
                 android:id="@+id/hard_button"
@@ -127,7 +128,9 @@
                 android:text="@string/hard"
                 android:layout_marginBottom="@dimen/medium_margin"
                 android:layout_marginStart="@dimen/extra_small_margin"
-                android:layout_marginEnd="@dimen/extra_small_margin"/>
+                android:layout_marginEnd="@dimen/extra_small_margin"
+                android:onClick="launchQuizActivity"
+                android:tag="@string/hard"/>
 
             <Button
                 android:id="@+id/brutal_button"
@@ -137,7 +140,9 @@
                 android:text="@string/brutal"
                 android:layout_marginBottom="@dimen/medium_margin"
                 android:layout_marginStart="@dimen/extra_small_margin"
-                android:layout_marginEnd="@dimen/extra_small_margin"/>
+                android:layout_marginEnd="@dimen/extra_small_margin"
+                android:onClick="launchQuizActivity"
+                android:tag="@string/brutal"/>
 
             <Button
                 android:id="@+id/maniac_button"
@@ -147,7 +152,9 @@
                 android:text="@string/manic"
                 android:layout_marginStart="@dimen/extra_small_margin"
                 android:layout_marginEnd="@dimen/extra_small_margin"
-                android:elevation="20dp"/>
+                android:elevation="20dp"
+                android:onClick="launchQuizActivity"
+                android:tag="@string/manic"/>
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

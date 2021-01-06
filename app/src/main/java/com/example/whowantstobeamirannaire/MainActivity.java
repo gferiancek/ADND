@@ -106,8 +106,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void launchQuizActivity(View view) {
         Intent intent = new Intent(MainActivity.this, QuizActivity.class);
-        Button pressedButton = (Button) view;
-        intent.putExtra("difficulty", pressedButton.getText());
+        intent.putExtra("difficulty", view.getTag().toString());
         mediaPlayer.release();
         mediaPlayer = null;
         startActivity(intent,
