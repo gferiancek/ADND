@@ -4,18 +4,37 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Question implements Parcelable {
 
     private String mQuestion;
-    private String[] mAnswerChoices;
+    private List<String> mAnswerChoices;
     private String mCorrectAnswer;
 
-    public Question (String question, String[] answerChoices, String correctAnswer) {
+    public Question (String question, List<String> answerChoices, String correctAnswer) {
         mQuestion = question;
         mAnswerChoices = answerChoices;
         mCorrectAnswer = correctAnswer;
     }
+
+    protected Question(Parcel in) {
+        mQuestion = in.readString();
+        mAnswerChoices = in.createStringArrayList();
+        mCorrectAnswer = in.readString();
+    }
+
+    public static final Creator<Question> CREATOR = new Creator<Question>() {
+        @Override
+        public Question createFromParcel(Parcel in) {
+            return new Question(in);
+        }
+
+        @Override
+        public Question[] newArray(int size) {
+            return new Question[size];
+        }
+    };
 
     public String getQuestion() {
         return mQuestion;
@@ -25,11 +44,11 @@ public class Question implements Parcelable {
         this.mQuestion = mQuestion;
     }
 
-    public String[] getAnswerChoices() {
+    public List<String> getAnswerChoices() {
         return mAnswerChoices;
     }
 
-    public void setAnswerChoices(String[] mAnswerChoices) {
+    public void setAnswerChoices(List<String> mAnswerChoices) {
         this.mAnswerChoices = mAnswerChoices;
     }
 
@@ -49,7 +68,7 @@ public class Question implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(mQuestion);
-        dest.writeStringArray(mAnswerChoices);
+        dest.writeList(mAnswerChoices);
         dest.writeString(mCorrectAnswer);
     }
 }

@@ -82,14 +82,15 @@
             android:layout_margin="@dimen/normal_margin" />
 
         <LinearLayout
+            android:id="@+id/button_container"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:orientation="vertical"
             android:layout_alignTop="@id/imageview"
-            android:layout_alignBottom="@id/imageview"
+            android:layout_above="@id/dev_check_box"
             android:layout_alignStart="@id/imageview"
             android:layout_marginTop="@dimen/large_margin"
-            android:layout_marginBottom="@dimen/extra_large_margin"
+            android:layout_marginBottom="@dimen/normal_margin"
             android:layout_marginStart="@dimen/small_margin">
 
             <Button
@@ -156,5 +157,14 @@
                 android:onClick="launchQuizActivity"
                 android:tag="@string/manic"/>
         </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/dev_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable Dev Mode?"
+            android:layout_alignBottom="@id/imageview"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginBottom="@dimen/large_margin"/>
     </RelativeLayout>
 </LinearLayout>

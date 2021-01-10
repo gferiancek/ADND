@@ -15,6 +15,7 @@ import android.transition.Fade;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.CompoundButton;
 
 import com.example.whowantstobeamirannaire.databinding.ActivityMainBinding;
 
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     MediaPlayer mediaPlayer;
+    boolean isDevModeEnabled;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +56,12 @@ public class MainActivity extends AppCompatActivity {
                 getResources().getColor(R.color.dark_blue), getResources().getColor(R.color.light_blue), Shader.TileMode.REPEAT);
         binding.title4Textview.getPaint().setShader(titleFourShader);
 
+        binding.devCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                isDevModeEnabled = isChecked;
+            }
+        });
     }
 
     @Override
@@ -107,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
     public void launchQuizActivity(View view) {
         Intent intent = new Intent(MainActivity.this, QuizActivity.class);
         intent.putExtra("difficulty", view.getTag().toString());
+        intent.putExtra("devMode", isDevModeEnabled);
         mediaPlayer.release();
         mediaPlayer = null;
         startActivity(intent,

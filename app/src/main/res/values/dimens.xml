@@ -15,7 +15,8 @@
 
     <dimen name="extra_large_text">36sp</dimen>
     <dimen name="large_text">24sp</dimen>
-    <dimen name="medium_text">18sp</dimen>
+    <dimen name="medium_text">20sp</dimen>
+    <dimen name="normal_text">18sp</dimen>
 
     <dimen name="extra_small_padding">4dp</dimen>
 </resources>

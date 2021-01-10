@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Who Wants to be a Mirannaire</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     // Strings used for the title screen
     <string name="rules">view rules</string>
@@ -12,12 +11,19 @@
     <string name="rules_title">Who Wants To Be A Mirannaire Rules</string>
     <string name="rules_message">Each round contains ten multiple choice questions.  Choose the right
         answer for each of them within the allotted time to win.\n\nChoosing a wrong answer or running
-        out of time on a question will darken one of the circles at the top of the screen.  When all
-        three of them turn gray you will lose the round.\n\nTap of the difficulty of your choice to begin.
+        out of time on a question will darken one of the x\'s at the top of the screen.  When all
+        three of them turn red you will lose the round.\n\nTap of the difficulty of your choice to begin.
         Higher difficulties will naturally have harder questions, but they also have a higher score multiplier.
-        Will you risk losing all of your circles for a chance at the high score?\n\nOh, and before I go,
-        if you manage to reach the end with at least two of your circles intact, you\'ll receive a bonus
+        Will you risk losing all of your x\'s for a chance at the high score?\n\nOh, and before I go,
+        if you manage to reach the end with at least two of your x\'s intact, you\'ll receive a bonus
         question about yours truly for a chance at even more points!\n~ Campanella</string>
+
+    // Strings used for QuestionFragment UI
+    <string name="score">score</string>
+    <string name="time_left">time left</string>
+    <string name="hint">Enter your response</string>
+    <string name="bonus_correct">You got a bonus question correct, that is an extra 1500 points!</string>
+    <string name="bonus_wrong">You got a bonus question wrong.  There is no penalty, but you don\'t get any points.</string>
 
     // Quiz questions
     <string name="normal_question_1">What\'s the last name of our ultra-dependable protagonist, Estelle?</string>
@@ -100,8 +106,10 @@
     <string name="maniac_question_18">What is the name of the continent on which the Trails series takes place?</string>
     <string name="maniac_question_19">What is the name given to the emblem of the Bracer Guild, a peace-keeping organization?</string>
     <string name="maniac_question_20">Which of the following is not a statistic that appears in the game?</string>
+    <string name="bonus_question_1">On the title screen, Campanella has one leg behind the other and one hand behind his back. Which two choices fit those conditions?</string>
+    <string name="bonus_question_2">The quiz is almost over, and I feel the host has really gotten to know you. Do you remember his name?</string>
 
-    // Answer Choice arrays  NOTE: Correct answer is always the top.  Choices are shuffled later in app.
+    // Answer Choice arrays  NOTE: Correct answer is always the top.
     <string-array name="normal_answers_1">
         <item>Bright</item>
         <item>Astray</item>
@@ -582,4 +590,11 @@
         <item>DEX (Dexterity)</item>
         <item>MOV (Movement)</item>
     </string-array>
+    <string-array name="bonus_answers_1">
+        <item>Left Hand</item>
+        <item>Right Hand</item>
+        <item>Left Leg</item>
+        <item>Right Leg</item>
+    </string-array>
+    <string name="bonus_answer_2">Campanella</string>
 </resources>
