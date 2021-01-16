@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/extra_small_margin">
+
+    <TextView
+        android:id="@+id/rank_header"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:layout_width="0dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/normal_text"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/range_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:textSize="@dimen/normal_text"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/prize_header"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:textSize="@dimen/normal_text"
+        android:textColor="@color/black" />
+</LinearLayout>

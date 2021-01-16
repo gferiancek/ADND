@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
     android:orientation="vertical">
 
@@ -25,7 +24,7 @@
             android:textSize="18sp"
             android:layout_marginStart="-20dp"
             android:layout_marginTop="64dp"
-            android:textAllCaps="true"/>
+            android:textAllCaps="true" />
 
         <TextView
             android:id="@+id/title_2_textview"
@@ -48,7 +47,7 @@
             android:layout_centerHorizontal="true"
             android:textSize="62sp"
             android:layout_marginBottom="@dimen/negative_normal_margin"
-            android:textAllCaps="true"/>
+            android:textAllCaps="true" />
 
         <TextView
             android:id="@+id/title_4_textview"
@@ -60,7 +59,7 @@
             android:layout_centerHorizontal="true"
             android:paddingStart="@dimen/extra_small_padding"
             android:paddingEnd="@dimen/extra_small_padding"
-            android:textAllCaps="true"/>
+            android:textAllCaps="true" />
 
     </RelativeLayout>
 
@@ -101,12 +100,12 @@
                 android:text="@string/rules"
                 android:layout_marginBottom="@dimen/medium_margin"
                 android:layout_marginStart="@dimen/extra_small_margin"
-                android:layout_marginEnd="@dimen/extra_small_margin"/>
+                android:layout_marginEnd="@dimen/extra_small_margin" />
 
-                <View
-                    android:layout_width="128dp"
-                    android:layout_height="0.5dp"
-                    android:background="@color/black" />
+            <View
+                android:layout_width="128dp"
+                android:layout_height="0.5dp"
+                android:background="@color/black" />
 
             <Button
                 android:id="@+id/normal_button"
@@ -119,7 +118,7 @@
                 android:layout_marginStart="@dimen/extra_small_margin"
                 android:layout_marginEnd="@dimen/extra_small_margin"
                 android:onClick="launchQuizActivity"
-                android:tag="@string/normal"/>
+                android:tag="@string/normal" />
 
             <Button
                 android:id="@+id/hard_button"
@@ -131,7 +130,7 @@
                 android:layout_marginStart="@dimen/extra_small_margin"
                 android:layout_marginEnd="@dimen/extra_small_margin"
                 android:onClick="launchQuizActivity"
-                android:tag="@string/hard"/>
+                android:tag="@string/hard" />
 
             <Button
                 android:id="@+id/brutal_button"
@@ -143,7 +142,7 @@
                 android:layout_marginStart="@dimen/extra_small_margin"
                 android:layout_marginEnd="@dimen/extra_small_margin"
                 android:onClick="launchQuizActivity"
-                android:tag="@string/brutal"/>
+                android:tag="@string/brutal" />
 
             <Button
                 android:id="@+id/maniac_button"
@@ -155,16 +154,17 @@
                 android:layout_marginEnd="@dimen/extra_small_margin"
                 android:elevation="20dp"
                 android:onClick="launchQuizActivity"
-                android:tag="@string/manic"/>
+                android:tag="@string/manic" />
         </LinearLayout>
 
         <CheckBox
             android:id="@+id/dev_check_box"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enable Dev Mode?"
+            android:text="@string/dev_mode"
+            android:textColor="@color/black"
             android:layout_alignBottom="@id/imageview"
             android:layout_marginStart="@dimen/normal_margin"
-            android:layout_marginBottom="@dimen/large_margin"/>
+            android:layout_marginBottom="@dimen/large_margin" />
     </RelativeLayout>
 </LinearLayout>

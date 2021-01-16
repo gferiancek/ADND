@@ -1,15 +1,10 @@
 package com.example.whowantstobeamirannaire;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.res.Resources;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.Toast;
 
 import com.example.whowantstobeamirannaire.databinding.ActivityQuizBinding;
 
@@ -17,6 +12,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.transition.Explode;
 
 public class QuizActivity extends AppCompatActivity implements PassDataInterface {
 
@@ -46,10 +44,7 @@ public class QuizActivity extends AppCompatActivity implements PassDataInterface
                     .add(R.id.fragment_container_view, QuestionFragment.newInstance(questionList, QuizActivity.this, difficultyMultiplier))
                     .commit();
         }
-
-        // Media Player
-        mediaPlayer = MediaPlayer.create(this, R.raw.arrival_existence);
-        mediaPlayer.start();
+        playMusic(currentDifficulty);
     }
 
     @Override
@@ -80,15 +75,14 @@ public class QuizActivity extends AppCompatActivity implements PassDataInterface
     /**
      * Function that makes the question objects for each difficutly and adds them into a List.
      *
-     * @param difficulty  Pulled from the MainActivity to load the questions for the selected difficultly.
-     *
-     * NOTE: the correctAnswer field is always choices.get(0).  In the stringArray, it is sorted so that the
-     * correct answer is always choice number 1.  That way, we can just bundle all choices in a single array
-     * and not have to worry about making a separate string in strings.xml or manually coding in the position of the correct
-     * answer.  Instead we just make a temporary string, correctAnswer, and then pass it to the Question.
+     * @param difficulty Pulled from the MainActivity to load the questions for the selected difficultly.
+     *                   <p>
+     *                   NOTE: the correctAnswer field is always choices.get(0).  In the stringArray, it is sorted so that the
+     *                   correct answer is always choice number 1.  That way, we can just bundle all choices in a single array
+     *                   and not have to worry about making a separate string in strings.xml or manually coding in the position of the correct
+     *                   answer.  Instead we just make a temporary string, correctAnswer, and then pass it to the Question.
      */
     private ArrayList<Question> initializeQuestions(String difficulty) {
-
         String questionIDString = "";
         String choiceIDString = "";
         // Strings are named diffuculty_question_# and difficulty_answers_#, so we can easily progmatically
@@ -182,11 +176,76 @@ public class QuizActivity extends AppCompatActivity implements PassDataInterface
 
     /**
      * @param totalScore is sent from the QuestionFragment once it determines that the user has failed
-     * or finished the quiz.  It is used in this interface to pass that data back to the MainActicity,
-     * and is then used to call the ResultsFragment and displays the user's score.
+     *                   or finished the quiz.  It is used in this interface to pass that data back to the MainActicity,
+     *                   and is then used to call the ResultsFragment and displays the user's score and other relevant information.
      */
     @Override
     public void onDataReceived(int totalScore) {
-        Toast.makeText(this, String.valueOf(totalScore), Toast.LENGTH_SHORT).show();
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+
+        int playerRank = calculatePlayerRank(totalScore);
+        String titleMessage = "";
+
+        if (playerRank > 7) {
+            playMusic("fail");
+            titleMessage = getString(R.string.fail);
+        } else if (playerRank > 4) {
+            playMusic("semipass");
+            titleMessage = getString(R.string.semipass);
+        } else if (playerRank > 1) {
+            playMusic("pass");
+            titleMessage = getString(R.string.pass);
+        } else {
+            playMusic("perfect");
+            titleMessage = getString(R.string.perfect);
+        }
+        // creates results fragment and sets the transition.
+        ResultsFragment resultsFragment = ResultsFragment.newInstance(playerRank, titleMessage, totalScore);
+        resultsFragment.setEnterTransition(new Explode().setDuration(200));
+        getSupportFragmentManager().beginTransaction()
+                .setReorderingAllowed(true)
+                .replace(R.id.fragment_container_view, resultsFragment, null)
+                .commit();
+    }
+
+    public void playMusic(String songTitle) {
+        int songID = getResources().getIdentifier(songTitle, "raw", getPackageName());
+
+        mediaPlayer = MediaPlayer.create(this, songID);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.start();
+    }
+
+    /**
+     * Simply checks the player's score and assigngs a numerical rank based on that score.  1 is the
+     * best rank, 10 is the worst.
+     */
+    public int calculatePlayerRank(int totalScore) {
+        int playerRank;
+        if (totalScore >= 400000) {
+            playerRank = 1;
+        } else if (totalScore >= 350000) {
+            playerRank = 2;
+        } else if (totalScore >= 300000) {
+            playerRank = 3;
+        } else if (totalScore >= 250000) {
+            playerRank = 4;
+        } else if (totalScore >= 200000) {
+            playerRank = 5;
+        } else if (totalScore >= 150000) {
+            playerRank = 6;
+        } else if (totalScore >= 100000) {
+            playerRank = 7;
+        } else if (totalScore >= 50000) {
+            playerRank = 8;
+        } else if (totalScore >= 10000) {
+            playerRank = 9;
+        } else {
+            playerRank = 10;
+        }
+        return playerRank;
     }
 }

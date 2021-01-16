@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/question_container"
@@ -22,7 +22,7 @@
             android:layout_marginStart="@dimen/normal_margin"
             android:layout_marginEnd="@dimen/small_margin"
             android:textAlignment="center"
-            android:gravity="center"/>
+            android:gravity="center" />
 
         <ImageView
             android:id="@+id/campanella_image_view"
@@ -51,21 +51,21 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_baseline_clear_48"/>
+            android:src="@drawable/ic_baseline_clear_48" />
 
         <ImageView
             android:id="@+id/wrong_image_view_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_baseline_clear_48"/>
+            android:src="@drawable/ic_baseline_clear_48" />
 
         <ImageView
             android:id="@+id/wrong_image_view_3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_baseline_clear_48"/>
+            android:src="@drawable/ic_baseline_clear_48" />
     </LinearLayout>
 
     <RadioGroup
@@ -77,7 +77,7 @@
         android:gravity="center_vertical"
         android:paddingStart="@dimen/extra_large_margin"
         android:paddingEnd="@dimen/extra_large_margin"
-        android:layout_marginTop="@dimen/normal_margin" >
+        android:layout_marginTop="@dimen/normal_margin">
 
         <RadioButton
             android:id="@+id/choice_1"
@@ -135,7 +135,7 @@
             android:layout_marginBottom="@dimen/large_margin"
             android:textSize="@dimen/large_text"
             android:paddingStart="@dimen/small_margin"
-            android:paddingEnd="@dimen/small_margin"/>
+            android:paddingEnd="@dimen/small_margin" />
 
         <CheckBox
             android:id="@+id/checkbox_2"
@@ -178,7 +178,7 @@
         android:inputType="text"
         android:imeOptions="actionDone"
         android:maxLines="1"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/score_text_view"
@@ -242,11 +242,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="submit"
+        android:text="@string/submit"
+        android:textSize="@dimen/extra_large_text"
         android:layout_marginStart="@dimen/extra_large_margin"
         android:layout_marginEnd="@dimen/extra_large_margin"
         android:layout_marginTop="@dimen/normal_margin"
         android:layout_marginBottom="@dimen/normal_margin"
-        android:layout_alignParentBottom="true"/>
-
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>

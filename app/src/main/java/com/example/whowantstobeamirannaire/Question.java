@@ -3,7 +3,6 @@ package com.example.whowantstobeamirannaire;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.io.Serializable;
 import java.util.List;
 
 public class Question implements Parcelable {
@@ -12,7 +11,7 @@ public class Question implements Parcelable {
     private List<String> mAnswerChoices;
     private String mCorrectAnswer;
 
-    public Question (String question, List<String> answerChoices, String correctAnswer) {
+    public Question(String question, List<String> answerChoices, String correctAnswer) {
         mQuestion = question;
         mAnswerChoices = answerChoices;
         mCorrectAnswer = correctAnswer;

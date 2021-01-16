@@ -5,16 +5,12 @@ import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.example.whowantstobeamirannaire.databinding.FragmentQuestionBinding;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.Timer;
@@ -42,8 +38,8 @@ public class QuestionFragment extends Fragment {
     }
 
     /**
-     * @param questionList Is the list of questions for the quiz
-     * @param passDataInterface is used to communicate with QuizActivity.
+     * @param questionList         Is the list of questions for the quiz
+     * @param passDataInterface    is used to communicate with QuizActivity.
      * @param difficultyMultiplier adds a multiplier to the final score, based on selected difficulty.
      * @return
      */
@@ -65,8 +61,6 @@ public class QuestionFragment extends Fragment {
             questionList = bundle.getParcelableArrayList("questionList");
             difficultyMultiplier = bundle.getDouble("difficultyMultiplier");
         }
-
-
     }
 
     @Override
@@ -123,10 +117,18 @@ public class QuestionFragment extends Fragment {
                 submittedAnswer = selectedButton.getText().toString();
             }
         } else if (questionIndex == 10) {
-            if (binding.checkbox1.isChecked()) { submittedAnswer += binding.checkbox1.getText().toString(); }
-            if (binding.checkbox2.isChecked()) { submittedAnswer += binding.checkbox2.getText().toString(); }
-            if (binding.checkbox3.isChecked()) { submittedAnswer += binding.checkbox3.getText().toString(); }
-            if (binding.checkbox4.isChecked()) { submittedAnswer += binding.checkbox4.getText().toString(); }
+            if (binding.checkbox1.isChecked()) {
+                submittedAnswer += binding.checkbox1.getText().toString();
+            }
+            if (binding.checkbox2.isChecked()) {
+                submittedAnswer += binding.checkbox2.getText().toString();
+            }
+            if (binding.checkbox3.isChecked()) {
+                submittedAnswer += binding.checkbox3.getText().toString();
+            }
+            if (binding.checkbox4.isChecked()) {
+                submittedAnswer += binding.checkbox4.getText().toString();
+            }
         } else {
             submittedAnswer += binding.bonusEditText.getText().toString().toLowerCase();
         }
@@ -148,11 +150,11 @@ public class QuestionFragment extends Fragment {
 
     /**
      * @param submittedAnswer is the user input from the submitAnswer() function, and is compared to the
-     * currentQuestion object's correct answer field.  Takes the appropriate action for a right/wrong answer.
-     *
-     * If the questionIndex is < 10, then the user is in the main part of the quiz, where points are based
-     * on remaining time left on the timer.  If it is 10 or above, they are in the bonus question section
-     * which has no timer and gives a fixed amount of points for a correct answer, with no penalty for a wrong answer.
+     *                        currentQuestion object's correct answer field.  Takes the appropriate action for a right/wrong answer.
+     *                        <p>
+     *                        If the questionIndex is < 10, then the user is in the main part of the quiz, where points are based
+     *                        on remaining time left on the timer.  If it is 10 or above, they are in the bonus question section
+     *                        which has no timer and gives a fixed amount of points for a correct answer, with no penalty for a wrong answer.
      */
     private void scoreQuestion(String submittedAnswer) {
         if (questionIndex < 10) {
@@ -199,7 +201,7 @@ public class QuestionFragment extends Fragment {
      * means we are on a normal question. If the user has gotten 1 or less questions wrong, we will load in the
      * bonus questions.  If questionIndex is 10, we're on the first bonus question using Checkboxes.  If it is
      * 11 we are on the second bonus question using an EditText.
-     *
+     * <p>
      * Equation for total score is the totalScore from answering questions * # of x's remaining * difficultyMultiplier.
      * If the quiz was failed, we just do totalScore * difficultyMultiplier to avoid * by 0.  Otherwise, the
      * normal equation persists.
@@ -215,7 +217,7 @@ public class QuestionFragment extends Fragment {
                 binding.choice3.setText(currentChoices.get(2));
                 binding.choice4.setText(currentChoices.get(3));
                 countDownTimer.start();
-            } else if (questionIndex == 10 && numberOfWrongAnswers <= 1) {
+            } else if (questionIndex == 10) {
                 // Bonus question 1 is checkboxes, so we set them up
                 binding.choicesContainer.setVisibility(View.GONE);
                 binding.checkboxContainer.setVisibility(View.VISIBLE);
@@ -223,7 +225,7 @@ public class QuestionFragment extends Fragment {
                 binding.checkbox2.setText(currentChoices.get(1));
                 binding.checkbox3.setText(currentChoices.get(2));
                 binding.checkbox4.setText(currentChoices.get(3));
-            } else if (questionIndex == 11 && numberOfWrongAnswers <= 1) {
+            } else {
                 // Bonus question 2 is an EditText, so we set that up
                 binding.checkboxContainer.setVisibility(View.GONE);
                 binding.bonusEditText.setVisibility(View.VISIBLE);
@@ -237,5 +239,16 @@ public class QuestionFragment extends Fragment {
             totalScore = (int) (totalScore * (3 - numberOfWrongAnswers) * difficultyMultiplier);
             sendTotalScore.onDataReceived(totalScore);
         }
+    }
+
+    /**
+     * If the user exits in the middle of a quiz, we need to make sure the countDownTimer
+     * does not continue to run in the background.
+     */
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        countDownTimer.cancel();
+        countDownTimer = null;
     }
 }
