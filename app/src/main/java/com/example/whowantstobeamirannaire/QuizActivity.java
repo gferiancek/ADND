@@ -41,7 +41,7 @@ public class QuizActivity extends AppCompatActivity implements PassDataInterface
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
-                    .add(R.id.fragment_container_view, QuestionFragment.newInstance(questionList, QuizActivity.this, difficultyMultiplier))
+                    .add(R.id.fragment_container_view, QuestionFragment.newInstance(questionList, QuizActivity.this, difficultyMultiplier, binding))
                     .commit();
         }
         playMusic(currentDifficulty);

@@ -8,7 +8,6 @@
         android:id="@+id/question_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/extra_large_margin"
         android:background="@color/light_yellow"
         android:elevation="5dp">
 
@@ -38,9 +37,10 @@
 
     <LinearLayout
         android:id="@+id/lives_container"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/question_container"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="@dimen/extra_large_margin"
         android:layout_marginEnd="@dimen/extra_large_margin"
@@ -68,16 +68,19 @@
             android:src="@drawable/ic_baseline_clear_48" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/choice_type_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/lives_container">
     <RadioGroup
         android:id="@+id/choices_container"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_below="@id/lives_container"
-        android:layout_above="@id/score_title_text_view"
+        android:layout_height="match_parent"
         android:gravity="center_vertical"
         android:paddingStart="@dimen/extra_large_margin"
-        android:paddingEnd="@dimen/extra_large_margin"
-        android:layout_marginTop="@dimen/normal_margin">
+        android:paddingEnd="@dimen/extra_large_margin">
 
         <RadioButton
             android:id="@+id/choice_1"
@@ -118,9 +121,7 @@
     <LinearLayout
         android:id="@+id/checkbox_container"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_below="@id/lives_container"
-        android:layout_above="@id/score_title_text_view"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center_vertical"
         android:paddingStart="@dimen/extra_large_margin"
@@ -179,35 +180,24 @@
         android:imeOptions="actionDone"
         android:maxLines="1"
         android:visibility="gone" />
-
-    <TextView
-        android:id="@+id/score_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/timer_progressbar"
-        android:textColor="@color/black"
-        android:textSize="@dimen/large_text"
-        android:layout_marginStart="@dimen/large_margin"
-        android:layout_marginEnd="@dimen/large_margin" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/score_title_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/score_text_view"
         android:text="@string/score"
         android:textAllCaps="true"
+        android:layout_below="@id/choice_type_container"
         android:layout_marginStart="@dimen/large_margin"
         android:layout_marginEnd="@dimen/large_margin"
         android:layout_marginTop="@dimen/normal_margin" />
 
-
     <TextView
-        android:id="@+id/timer_text_view"
+        android:id="@+id/score_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/timer_progressbar"
-        android:layout_alignParentEnd="true"
+        android:layout_below="@id/score_title_text_view"
         android:textColor="@color/black"
         android:textSize="@dimen/large_text"
         android:layout_marginStart="@dimen/large_margin"
@@ -217,7 +207,7 @@
         android:id="@+id/timer_title_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/score_text_view"
+        android:layout_below="@id/choice_type_container"
         android:text="@string/time_left"
         android:textAllCaps="true"
         android:layout_alignParentEnd="true"
@@ -225,12 +215,23 @@
         android:layout_marginEnd="@dimen/large_margin"
         android:layout_marginTop="@dimen/normal_margin" />
 
+    <TextView
+        android:id="@+id/timer_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timer_title_text_view"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/large_text"
+        android:layout_marginStart="@dimen/large_margin"
+        android:layout_marginEnd="@dimen/large_margin" />
+
     <ProgressBar
         android:id="@+id/timer_progressbar"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/submit_button"
+        android:layout_below="@id/score_text_view"
         android:progressTint="@color/dark_red"
         android:max="7000"
         android:progress="7000"
@@ -248,5 +249,5 @@
         android:layout_marginEnd="@dimen/extra_large_margin"
         android:layout_marginTop="@dimen/normal_margin"
         android:layout_marginBottom="@dimen/normal_margin"
-        android:layout_alignParentBottom="true" />
+        android:layout_below="@id/timer_progressbar"/>
 </RelativeLayout>

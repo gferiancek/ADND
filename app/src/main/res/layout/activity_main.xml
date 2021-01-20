@@ -1,170 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:fillViewport="true">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/light_yellow"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:elevation="5dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/title_1_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Campanella's"
-            android:layout_alignStart="@id/title_2_textview"
-            android:textSize="18sp"
-            android:layout_marginStart="-20dp"
-            android:layout_marginTop="64dp"
-            android:textAllCaps="true" />
-
-        <TextView
-            android:id="@+id/title_2_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Who Wants To Be A"
-            android:layout_below="@id/title_1_textview"
-            android:layout_centerHorizontal="true"
-            android:textSize="30sp"
-            android:layout_marginBottom="-20dp"
-            android:layout_marginTop="@dimen/negative_small_margin"
-            android:textAllCaps="true" />
-
-        <TextView
-            android:id="@+id/title_3_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mirannaire"
-            android:layout_below="@id/title_2_textview"
-            android:layout_centerHorizontal="true"
-            android:textSize="62sp"
-            android:layout_marginBottom="@dimen/negative_normal_margin"
-            android:textAllCaps="true" />
-
-        <TextView
-            android:id="@+id/title_4_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Trails in the Sky Edition"
-            android:layout_below="@id/title_3_textview"
-            android:textSize="16sp"
-            android:layout_centerHorizontal="true"
-            android:paddingStart="@dimen/extra_small_padding"
-            android:paddingEnd="@dimen/extra_small_padding"
-            android:textAllCaps="true" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="2.5"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/light_yellow"
-        android:elevation="5dp">
-
-        <ImageView
-            android:id="@+id/imageview"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/campanella_7"
-            android:scaleType="fitEnd"
-            android:layout_margin="@dimen/normal_margin" />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/light_yellow"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="5dp">
 
-        <LinearLayout
-            android:id="@+id/button_container"
+            <TextView
+                android:id="@+id/title_1_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Campanella's"
+                android:layout_alignStart="@id/title_2_textview"
+                android:textSize="18sp"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="64dp"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/title_2_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Who Wants To Be A"
+                android:layout_below="@id/title_1_textview"
+                android:layout_centerHorizontal="true"
+                android:textSize="30sp"
+                android:layout_marginBottom="-20dp"
+                android:layout_marginTop="@dimen/negative_small_margin"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/title_3_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mirannaire"
+                android:layout_below="@id/title_2_textview"
+                android:layout_centerHorizontal="true"
+                android:textSize="62sp"
+                android:layout_marginBottom="@dimen/negative_normal_margin"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/title_4_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trails in the Sky Edition"
+                android:layout_below="@id/title_3_textview"
+                android:textSize="16sp"
+                android:layout_centerHorizontal="true"
+                android:paddingStart="@dimen/extra_small_padding"
+                android:paddingEnd="@dimen/extra_small_padding"
+                android:textAllCaps="true" />
+
+        </RelativeLayout>
+        =
+
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:orientation="vertical"
-            android:layout_alignTop="@id/imageview"
-            android:layout_above="@id/dev_check_box"
-            android:layout_alignStart="@id/imageview"
-            android:layout_marginTop="@dimen/large_margin"
-            android:layout_marginBottom="@dimen/normal_margin"
-            android:layout_marginStart="@dimen/small_margin">
+            android:layout_weight="2.5"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/light_yellow"
+            android:elevation="5dp">
 
-            <Button
-                android:id="@+id/rules_button"
+            <ImageView
+                android:id="@+id/imageview"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="@string/rules"
-                android:layout_marginBottom="@dimen/medium_margin"
-                android:layout_marginStart="@dimen/extra_small_margin"
-                android:layout_marginEnd="@dimen/extra_small_margin" />
+                android:layout_height="match_parent"
+                android:src="@drawable/campanella_7"
+                android:scaleType="fitEnd"
+                android:layout_margin="@dimen/normal_margin" />
 
-            <View
-                android:layout_width="128dp"
-                android:layout_height="0.5dp"
-                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/button_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@id/imageview"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/normal_margin"
+                android:layout_marginStart="@dimen/small_margin">
 
-            <Button
-                android:id="@+id/normal_button"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:text="@string/normal"
-                android:layout_weight="1"
-                android:layout_marginTop="@dimen/medium_margin"
-                android:layout_marginBottom="@dimen/medium_margin"
-                android:layout_marginStart="@dimen/extra_small_margin"
-                android:layout_marginEnd="@dimen/extra_small_margin"
-                android:onClick="launchQuizActivity"
-                android:tag="@string/normal" />
+                <Button
+                    android:id="@+id/rules_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.2"
+                    android:text="@string/rules"
+                    android:layout_marginBottom="@dimen/medium_margin"
+                    android:layout_marginStart="@dimen/extra_small_margin"
+                    android:layout_marginEnd="@dimen/extra_small_margin" />
 
-            <Button
-                android:id="@+id/hard_button"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="@string/hard"
-                android:layout_marginBottom="@dimen/medium_margin"
-                android:layout_marginStart="@dimen/extra_small_margin"
-                android:layout_marginEnd="@dimen/extra_small_margin"
-                android:onClick="launchQuizActivity"
-                android:tag="@string/hard" />
+                <View
+                    android:layout_width="128dp"
+                    android:layout_height="0.5dp"
+                    android:background="@color/black" />
 
-            <Button
-                android:id="@+id/brutal_button"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="@string/brutal"
-                android:layout_marginBottom="@dimen/medium_margin"
-                android:layout_marginStart="@dimen/extra_small_margin"
-                android:layout_marginEnd="@dimen/extra_small_margin"
-                android:onClick="launchQuizActivity"
-                android:tag="@string/brutal" />
+                <Button
+                    android:id="@+id/normal_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="@string/normal"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginBottom="@dimen/medium_margin"
+                    android:layout_marginStart="@dimen/extra_small_margin"
+                    android:layout_marginEnd="@dimen/extra_small_margin"
+                    android:onClick="launchQuizActivity"
+                    android:tag="@string/normal" />
 
-            <Button
-                android:id="@+id/maniac_button"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="@string/manic"
-                android:layout_marginStart="@dimen/extra_small_margin"
-                android:layout_marginEnd="@dimen/extra_small_margin"
-                android:elevation="20dp"
-                android:onClick="launchQuizActivity"
-                android:tag="@string/manic" />
-        </LinearLayout>
+                <Button
+                    android:id="@+id/hard_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/hard"
+                    android:layout_marginBottom="@dimen/medium_margin"
+                    android:layout_marginStart="@dimen/extra_small_margin"
+                    android:layout_marginEnd="@dimen/extra_small_margin"
+                    android:onClick="launchQuizActivity"
+                    android:tag="@string/hard" />
 
-        <CheckBox
-            android:id="@+id/dev_check_box"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dev_mode"
-            android:textColor="@color/black"
-            android:layout_alignBottom="@id/imageview"
-            android:layout_marginStart="@dimen/normal_margin"
-            android:layout_marginBottom="@dimen/large_margin" />
-    </RelativeLayout>
-</LinearLayout>
+                <Button
+                    android:id="@+id/brutal_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/brutal"
+                    android:layout_marginBottom="@dimen/medium_margin"
+                    android:layout_marginStart="@dimen/extra_small_margin"
+                    android:layout_marginEnd="@dimen/extra_small_margin"
+                    android:onClick="launchQuizActivity"
+                    android:tag="@string/brutal" />
+
+                <Button
+                    android:id="@+id/maniac_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/manic"
+                    android:layout_marginStart="@dimen/extra_small_margin"
+                    android:layout_marginEnd="@dimen/extra_small_margin"
+                    android:elevation="20dp"
+                    android:onClick="launchQuizActivity"
+                    android:tag="@string/manic" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/dev_check_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dev_mode"
+                android:textColor="@color/black"
+                android:layout_below="@id/button_container"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginBottom="@dimen/large_margin" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

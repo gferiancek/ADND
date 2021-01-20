@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.example.whowantstobeamirannaire.databinding.ActivityQuizBinding;
 import com.example.whowantstobeamirannaire.databinding.FragmentQuestionBinding;
 
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public class QuestionFragment extends Fragment {
     private FragmentQuestionBinding binding;
     private CountDownTimer countDownTimer;
     static public PassDataInterface sendTotalScore;
+    static ActivityQuizBinding activityBinding;
 
     public QuestionFragment() {
         // Required empty public constructor
@@ -43,9 +45,10 @@ public class QuestionFragment extends Fragment {
      * @param difficultyMultiplier adds a multiplier to the final score, based on selected difficulty.
      * @return
      */
-    public static QuestionFragment newInstance(ArrayList<Question> questionList, PassDataInterface passDataInterface, double difficultyMultiplier) {
+    public static QuestionFragment newInstance(ArrayList<Question> questionList, PassDataInterface passDataInterface, double difficultyMultiplier, ActivityQuizBinding binding) {
         QuestionFragment questionFragment = new QuestionFragment();
         sendTotalScore = passDataInterface;
+        activityBinding = binding;
         Bundle bundle = new Bundle();
         bundle.putParcelableArrayList("questionList", questionList);
         bundle.putDouble("difficultyMultiplier", difficultyMultiplier);
@@ -145,6 +148,7 @@ public class QuestionFragment extends Fragment {
             }, 750);
         }
         questionIndex++;
+        activityBinding.quizScrollView.scrollTo(0, 0);
         loadNextQuestion();
     }
 
