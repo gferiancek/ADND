@@ -1,0 +1,78 @@
+package com.example.musicplayer.adapter;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.example.musicplayer.R;
+import com.example.musicplayer.model.Song;
+import com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller;
+
+import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder> implements RecyclerViewFastScroller.OnPopupTextUpdate {
+
+    ArrayList<Song> songs;
+    Context context;
+
+    public class SongViewHolder extends RecyclerView.ViewHolder {
+
+        ImageView albumArtImageView;
+        TextView titleTextView;
+        TextView artistTextView;
+        TextView runtimeTextView;
+
+        public SongViewHolder(@NonNull View view) {
+            super(view);
+            albumArtImageView = view.findViewById(R.id.album_art_iv);
+            titleTextView = view.findViewById(R.id.title_tv);
+            artistTextView = view.findViewById(R.id.artist_tv);
+            runtimeTextView = view.findViewById(R.id.runtime_tv);
+        }
+    }
+
+    public SongAdapter(ArrayList<Song> songs, Context context) {
+        this.songs = songs;
+        this.context = context;
+    }
+
+    @NonNull
+    @Override
+    public SongViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new SongViewHolder(LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.song_list_item, parent, false));
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull SongViewHolder holder, int position) {
+        holder.titleTextView.setText(songs.get(position).getTitle());
+        holder.artistTextView.setText(songs.get(position).getArtist());
+        holder.runtimeTextView.setText(songs.get(position).getRuntime());
+        Glide.with(context)
+                .load(songs.get(position).getAlbumArtUri())
+                .placeholder(R.drawable.placeholder)
+                .into(holder.albumArtImageView);
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return songs.size();
+    }
+
+    @NotNull
+    @Override
+    public CharSequence onChange(int i) {
+        return songs.get(i).getTitle().substring(0, 1).toUpperCase();
+    }
+
+}
