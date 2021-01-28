@@ -1,93 +1,9 @@
 <resources>
     <string name="app_name">MusicPlayer</string>
 
-    <string-array name="song_1">
-        <item>Something Beautiful</item>
-        <item>Cauterize</item>
-        <item>So Far From Real</item>
-        <item>1</item>
-        <item>3:21</item>
-        <item>2003</item>
-    </string-array>
-    <string-array name="song_2">
-        <item>If You Go</item>
-        <item>Cauterize</item>
-        <item>So Far From Real</item>
-        <item>2</item>
-        <item>3:49</item>
-        <item>2003</item>
-    </string-array>
-    <string-array name="song_3">
-        <item>My Everything</item>
-        <item>Cauterize</item>
-        <item>So Far From Real</item>
-        <item>3</item>
-        <item>3:53</item>
-        <item>2003</item>
-    </string-array>
-    <string-array name="song_4">
-        <item>Killing Me</item>
-        <item>Cauterize</item>
-        <item>So Far From Real</item>
-        <item>4</item>
-        <item>3:30</item>
-        <item>2003</item>
-    </string-array>
-    <string-array name="song_5">
-        <item>Taste of Tears</item>
-        <item>Cauterize</item>
-        <item>So Far From Real</item>
-        <item>5</item>
-        <item>3:22</item>
-        <item>2003</item>
-    </string-array>
-    <string-array name="song_6">
-        <item>Still Breathing</item>
-        <item>Cauterize</item>
-        <item>So Far From Real</item>
-        <item>6</item>
-        <item>3:35</item>
-        <item>2003</item>
-    </string-array>
-    <string-array name="song_7">
-        <item>I\'ll Cry Tomorrow</item>
-        <item>Cauterize</item>
-        <item>So Far From Real</item>
-        <item>7</item>
-        <item>3:01</item>
-        <item>2003</item>
-    </string-array>
-    <string-array name="song_8">
-        <item>Choke</item>
-        <item>Cauterize</item>
-        <item>So Far From Real</item>
-        <item>8</item>
-        <item>4:02</item>
-        <item>2003</item>
-    </string-array>
-    <string-array name="song_9">
-        <item></item>
-        <item>Cauterize</item>
-        <item>So Far From Real</item>
-        <item>1</item>
-        <item>3:21</item>
-        <item>2003</item>
-    </string-array>
-    <string-array name="song_10">
-        <item>Something Beautiful</item>
-        <item>Cauterize</item>
-        <item>So Far From Real</item>
-        <item>1</item>
-        <item>3:21</item>
-        <item>2003</item>
-    </string-array>
-    <string-array name="song_11">
-        <item>Something Beautiful</item>
-        <item>Cauterize</item>
-        <item>So Far From Real</item>
-        <item>1</item>
-        <item>3:21</item>
-        <item>2003</item>
-    </string-array>
+    // &lt; is left open bracket, &gt; is right open bracket
+    <string name="unknown_text">&lt;unknown&gt;</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

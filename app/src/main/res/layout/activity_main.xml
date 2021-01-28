@@ -6,18 +6,25 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="songlist Size"
-        android:onClick="showSize" />
-
     <com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/song_list_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller>
+
+    <com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/artist_list_rv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

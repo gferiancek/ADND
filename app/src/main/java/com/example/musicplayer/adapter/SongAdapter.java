@@ -21,22 +21,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder> implements RecyclerViewFastScroller.OnPopupTextUpdate {
 
-    ArrayList<Song> songs;
-    Context context;
+    private final ArrayList<Song> songs;
+    private final Context context;
 
-    public class SongViewHolder extends RecyclerView.ViewHolder {
+    public static class SongViewHolder extends RecyclerView.ViewHolder {
 
         ImageView albumArtImageView;
         TextView titleTextView;
         TextView artistTextView;
         TextView runtimeTextView;
 
-        public SongViewHolder(@NonNull View view) {
-            super(view);
-            albumArtImageView = view.findViewById(R.id.album_art_iv);
-            titleTextView = view.findViewById(R.id.title_tv);
-            artistTextView = view.findViewById(R.id.artist_tv);
-            runtimeTextView = view.findViewById(R.id.runtime_tv);
+        public SongViewHolder(@NonNull View itemView) {
+            super(itemView);
+            albumArtImageView = itemView.findViewById(R.id.album_art_iv);
+            titleTextView = itemView.findViewById(R.id.title_tv);
+            artistTextView = itemView.findViewById(R.id.artist_tv);
+            runtimeTextView = itemView.findViewById(R.id.runtime_tv);
         }
     }
 
@@ -74,5 +74,4 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
     public CharSequence onChange(int i) {
         return songs.get(i).getTitle().substring(0, 1).toUpperCase();
     }
-
 }

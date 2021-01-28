@@ -9,11 +9,26 @@ import java.util.ArrayList;
  */
 public class Artist {
 
-    private String artist;
+    private String name;
     private ArrayList<Album> albumList = new ArrayList<Album>();
 
-    public Artist(String artist) {
-        this.artist = artist;
+    public Artist(String name) {
+        this.name = name;
+    }
+
+    public ArrayList<Album> getAlbumList() {
+        return albumList;
+    }
+
+    public void setAlbumList(ArrayList<Album> albumList) {
         this.albumList = albumList;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
