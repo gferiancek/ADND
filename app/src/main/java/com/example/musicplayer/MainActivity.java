@@ -5,28 +5,24 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.widget.Toast;
 
-import com.example.musicplayer.adapter.ArtistAdapter;
-import com.example.musicplayer.adapter.SongAdapter;
+import com.example.musicplayer.adapter.MusicPagerAdapter;
 import com.example.musicplayer.databinding.ActivityMainBinding;
 import com.example.musicplayer.model.MusicLibrary;
 import com.example.musicplayer.model.Song;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
-    SongAdapter songAdapter;
     ArrayList<Song> songList = new ArrayList<>();
-    ArtistAdapter artistAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,21 +30,20 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // TODO Request Storage permission and then test Album ImageView fixed dp values on different devices.
         getUserSongInfo();
-        Collections.sort(songList, (song1, song2) ->
-                song1.getTitle().compareToIgnoreCase(song2.getTitle()));
-        songAdapter = new SongAdapter(songList, this);
-        binding.songListRv.setLayoutManager(new LinearLayoutManager(this,
-                LinearLayoutManager.VERTICAL, false));
-        binding.songListRv.setAdapter(songAdapter);
-        MusicLibrary musicLibrary = new MusicLibrary();
-        musicLibrary.addSongToLibrary(songList);
+        MusicLibrary.getInstance().addToLibrary(songList);
+        Toast.makeText(this, String.valueOf(songList.size()), Toast.LENGTH_SHORT).show();
 
-        artistAdapter = new ArtistAdapter(musicLibrary.getArtistList(), this);
-        binding.artistListRv.setLayoutManager(new LinearLayoutManager(this,
-                RecyclerView.VERTICAL, false));
-        binding.artistListRv.setAdapter(artistAdapter);
+        String[] titles = new String[]{
+                getString(R.string.now_playing),
+                getString(R.string.artists),
+                getString(R.string.albums),
+                getString(R.string.songs)};
 
+        binding.viewPager.setAdapter(new MusicPagerAdapter(this, titles));
+        new TabLayoutMediator(binding.tabLayout, binding.viewPager,
+                (tab, position) -> tab.setText(titles[position])).attach();
     }
 
     public void getUserSongInfo() {

@@ -8,19 +8,16 @@ import android.widget.TextView;
 
 import com.example.musicplayer.R;
 import com.example.musicplayer.model.Artist;
-import com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller;
-
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import me.zhanghai.android.fastscroll.PopupTextProvider;
 
-public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.ArtistViewHolder> implements RecyclerViewFastScroller.OnPopupTextUpdate {
+public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.ArtistViewHolder> implements PopupTextProvider {
 
-    private ArrayList<Artist> artists;
-    private Context context;
+    private final ArrayList<Artist> artists;
 
     public static class ArtistViewHolder extends RecyclerView.ViewHolder {
 
@@ -34,7 +31,6 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.ArtistView
 
     public ArtistAdapter(ArrayList<Artist> artists, Context context) {
         this.artists = artists;
-        this.context = context;
     }
 
     @NonNull
@@ -54,9 +50,10 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.ArtistView
         return artists.size();
     }
 
-    @NotNull
+    @NonNull
     @Override
-    public CharSequence onChange(int i) {
-        return artists.get(i).getName().substring(0, 1).toUpperCase();
+    public String getPopupText(int position) {
+        return artists.get(position).getName().substring(0, 1).toUpperCase();
     }
+
 }

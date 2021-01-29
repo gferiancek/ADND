@@ -1,5 +1,7 @@
 package com.example.musicplayer.model;
 
+import android.net.Uri;
+
 import java.util.ArrayList;
 
 /**
@@ -9,13 +11,13 @@ import java.util.ArrayList;
 public class Album {
 
     private String title;
-    private String artist;
-    private ArrayList<Song> songList = new ArrayList<Song>();
+    private ArrayList<Song> songList;
+    private Uri albumArtUri;
 
-    public Album(String title, String artist, ArrayList<Song> songList) {
+    public Album(String title, ArrayList<Song> songList, Uri albumArtUri) {
         this.title = title;
-        this.artist = artist;
         this.songList = songList;
+        this.albumArtUri = albumArtUri;
     }
 
     public String getTitle() {
@@ -26,19 +28,19 @@ public class Album {
         this.title = title;
     }
 
-    public String getArtist() {
-        return artist;
-    }
-
-    public void setArtist(String artist) {
-        this.artist = artist;
-    }
-
     public ArrayList<Song> getSongList() {
         return songList;
     }
 
     public void setSongList(ArrayList<Song> songList) {
         this.songList = songList;
+    }
+
+    public Uri getAlbumArtUri() {
+        return albumArtUri;
+    }
+
+    public void setAlbumArtUri(Uri albumArtUri) {
+        this.albumArtUri = albumArtUri;
     }
 }

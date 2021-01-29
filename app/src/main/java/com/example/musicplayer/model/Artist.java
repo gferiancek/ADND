@@ -12,8 +12,9 @@ public class Artist {
     private String name;
     private ArrayList<Album> albumList = new ArrayList<Album>();
 
-    public Artist(String name) {
+    public Artist(String name, ArrayList<Album> albumList) {
         this.name = name;
+        this.albumList = albumList;
     }
 
     public ArrayList<Album> getAlbumList() {

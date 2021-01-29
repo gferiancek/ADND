@@ -5,5 +5,11 @@
     <string name="unknown_text">&lt;unknown&gt;</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    // Strings used for TabLayout titles
+    <string name="now_playing">Now Playing</string>
+    <string name="artists">Artists</string>
+    <string name="albums">Albums</string>
+    <string name="songs">Songs</string>
+    <string name="title">title</string>
 
 </resources>
