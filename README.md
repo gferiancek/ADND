@@ -8,7 +8,7 @@ Project #3 Build a Quiz App on a topic you are knowledgable about.
 - [x] Quiz screen
 ## 3. Implement Fragments
 - [x] Fragment for Quiz Screen.  Need to experiment on whether  I'll need a different fragment for each type of question. (Radio/Checkbox/Manual Entry)
-- [ ] Fragment for Results screen
+- [x] Fragment for Results screen
 ## 4. Core Logic
 - [x] Function that loads the next question into the fragment.
 - [x] Function that randomizes the answer choice order (May be able to combine with the above, but we'll start seperate until an implementation is made.)
