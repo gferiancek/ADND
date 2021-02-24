@@ -20,7 +20,7 @@ Project #2  Build an app to track metrics for a sport/game of your choice
 ## 4. Visual Polish and Code Clean Up
 - [x] Done
 ## Optional Features
-- [ ] Implement Function to detect if game needs to add Extra Innings for Tie Breakers.
-    - Should follow rules of no more than 9 extra innings, and update the scoreboard to show extra innings.
+- [ ] ~~Implement Function to detect if game needs to add Extra Innings for Tie Breakers.~~
+    - ~~Should follow rules of no more than 9 extra innings, and update the scoreboard to show extra innings.~~
     
 Decided this feature was way out of scope for the project and did not implement it.
