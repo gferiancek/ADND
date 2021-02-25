@@ -3,6 +3,7 @@ Project #4 Build the structure for a Media Player app
 =======
 ## 1.  Basic Setup
 - [x] Add ViewPager + Fragment for navigation header
+  - [x] Build Layout for the SingleListFragment. (This required to test MediaStore Logic.  We will build the other fragments later.)
 - [x] Add necesarry RecyclerViewers to display lists of songs/artists/albums
 - [x] Add model classes for Song/Album/Artist, as well as a Library object to manage all of the lists of objects.
 ## 2. Implement MediaStore API
@@ -11,8 +12,9 @@ Project #4 Build the structure for a Media Player app
 - [x] Build the Library object from list of songs. (We want to end up with a list of Artists, that has a list of all of it's albums, each of which has a list of all of the songs.) 
   -  Solved by using Java Streams; not availible on older API versions, but it has far cleaner code than the original implementation.
 - [x] Display data to RecyclerViews
-## 3. Now Playing Fragment
-- [ ] Build the layout for the now playing screen
+## 3. NowPlayingFragment, DualListFragment & Click Logic
+- [x] Build the layout for the NowPlayingFragment
+- [ ] Build the layout for the DualListFragment
 - [ ] Add click Listeners for RecyclerViews
   - [ ] Clicking on Artist brings up list of albums/songs
   - [ ] Clicking on Album brings up list of songs
