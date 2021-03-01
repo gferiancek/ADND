@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="horizontal_margin">16dp</dimen>
+    <dimen name="large_margin">16dp</dimen>
+    <dimen name="medium_margin">8dp</dimen>
+    <dimen name="small_margin">4dp</dimen>
+
+    <dimen name="large_padding">16dp</dimen>
+
+    <dimen name="large_text_size">20sp</dimen>
     <dimen name="normal_text_size">16sp</dimen>
-    <dimen name="margin_bottom">4dp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+
+    <dimen name="normal_corner_radius">16dp</dimen>
+
+    <dimen name="song_iv_size">50dp</dimen>
 </resources>

@@ -1,10 +1,15 @@
 package com.example.musicplayer;
 
+import android.Manifest;
 import android.content.ContentUris;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.musicplayer.adapter.MusicPagerAdapter;
@@ -17,7 +22,9 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,10 +37,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // TODO Request Storage permission and then test Album ImageView fixed dp values on different devices.
-        getUserSongInfo();
-        MusicLibrary.getInstance().addToLibrary(songList);
-        Toast.makeText(this, String.valueOf(songList.size()), Toast.LENGTH_SHORT).show();
+        isReadStoragePermissionGranted();
 
         String[] titles = new String[]{
                 getString(R.string.now_playing),
@@ -41,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 getString(R.string.albums),
                 getString(R.string.songs)};
 
+        setSupportActionBar(binding.toolbar);
         binding.viewPager.setAdapter(new MusicPagerAdapter(this, titles));
         new TabLayoutMediator(binding.tabLayout, binding.viewPager,
                 (tab, position) -> tab.setText(titles[position])).attach();
@@ -96,6 +101,48 @@ public class MainActivity extends AppCompatActivity {
                 Uri albumArtUri = ContentUris.withAppendedId(tempUri, albumId);
                 songList.add(new Song(name, artist, album, trackNumber, runtimeString, year, albumArtUri));
             }
+        }
+    }
+
+    public void isReadStoragePermissionGranted() {
+        if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+                == PackageManager.PERMISSION_GRANTED) {
+            getUserSongInfo();
+            MusicLibrary.getInstance().addToLibrary(songList);
+        } else {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                    3);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            getUserSongInfo();
+            MusicLibrary.getInstance().addToLibrary(songList);
+        } else {
+            Toast.makeText(this, R.string.permission_denied, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.overflow_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        // Switch isn't necessary since there's only one menu item.  Used so that it's easier to add
+        // more menu items when desired.
+        switch (item.getItemId()) {
+            case R.id.settings_item:
+                Intent intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }

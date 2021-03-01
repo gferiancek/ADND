@@ -20,7 +20,6 @@ public class NowPlayingFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     public static NowPlayingFragment newInstance(String param1, String param2) {
         NowPlayingFragment fragment = new NowPlayingFragment();
         return fragment;

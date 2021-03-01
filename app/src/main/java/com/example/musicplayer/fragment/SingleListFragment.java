@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 /**
- * Fragment used when only a single RecyclerView is used for the display of content.
+ * Fragment used when only a single RecyclerView is used to display the content.
  */
 public class SingleListFragment extends Fragment {
 
@@ -38,7 +38,6 @@ public class SingleListFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
 
     /**
      * String title, pulled from the TabLayout, is passed in from the MusicPagerAdapter and is compared

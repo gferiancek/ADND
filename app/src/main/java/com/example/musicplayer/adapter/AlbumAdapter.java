@@ -22,7 +22,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
     private final ArrayList<Album> albums;
     private final Context context;
 
-    public static class AlbumViewHolder extends RecyclerView.ViewHolder {
+    public static class AlbumViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         ImageView imageView;
         TextView textView;
@@ -31,6 +31,12 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
             super(itemView);
             imageView = itemView.findViewById(R.id.list_album_iv);
             textView = itemView.findViewById(R.id.list_album_tv);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+
         }
     }
 

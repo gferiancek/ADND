@@ -3,8 +3,16 @@
 
     // &lt; is left open bracket, &gt; is right open bracket
     <string name="unknown_text">&lt;unknown&gt;</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="permission_denied">Please grant access to Read External Storage Permission for the app to function properly.</string>
+    <string name="settings">Settings</string>
+    <string name="settings_placeholder">This activity would be used to display a list of configurable settings.</string>
+
+    // Strings used for the NowPlaying Fragment
+    <string name="current_song">Song Title</string>
+    <string name="current_artist">Artist Name</string>
+    <string name="current_album">Album Name</string>
+    <string name="current_runtime">0:00</string>
+
     // Strings used for TabLayout titles
     <string name="now_playing">Now Playing</string>
     <string name="artists">Artists</string>

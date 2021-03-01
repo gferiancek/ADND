@@ -5,11 +5,11 @@
 
     <ImageView
         android:id="@+id/album_art_iv"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="@dimen/song_iv_size"
+        android:layout_height="@dimen/song_iv_size"
+        android:layout_marginStart="@dimen/large_margin"
+        android:layout_marginTop="@dimen/large_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
         android:scaleType="centerInside" />
 
     <TextView
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/album_art_iv"
         android:layout_alignBottom="@id/album_art_iv"
-        android:layout_marginBottom="4dp" />
+        android:layout_marginBottom="@dimen/small_margin" />
 
     <TextView
         android:id="@+id/runtime_tv"
@@ -37,6 +37,6 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/artist_tv"
         android:layout_alignParentEnd="true"
-        android:paddingEnd="16dp"
-        android:paddingStart="16dp" />
+        android:paddingEnd="@dimen/large_padding"
+        android:paddingStart="@dimen/large_padding" />
 </RelativeLayout>
