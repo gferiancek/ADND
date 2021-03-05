@@ -15,7 +15,7 @@ Project #4 Build the structure for a Media Player app
 ## 3. NowPlayingFragment, DualListFragment & Click Logic
 - [x] Build the layout for the NowPlayingFragment
 - [ ] ~Build the layout for the DualListFragment~
-- [ ]~ Add click Listeners for RecyclerViews~
+- [ ] ~Add click Listeners for RecyclerViews~
   - [ ] ~Clicking on Artist brings up list of albums/songs~
   - [ ] ~Clicking on Album brings up list of songs~
   - [ ] ~Clicking on Song will scroll to Now Playing fragment and populate views with song data~
