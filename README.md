@@ -9,4 +9,6 @@ This is the overview branch that will list general info about projects and their
 
 ### Project # 3: Build a Quiz App (COMPLETE) - [WhoWantsToBeAMirannaire](https://github.com/gferiancek/ADND/tree/WhoWantsToBeAMirannaire_Master)
 
-### Project # 4: Build the Structer of a Music Player (WIP) - [MediaPlayer](https://github.com/gferiancek/ADND/tree/MusicPlayer_Master)
+### Project # 4: Build the Structer of a Music Player (COMPLETE) - [MediaPlayer](https://github.com/gferiancek/ADND/tree/MusicPlayer_Master)
+
+### Project # 5: Build a Tour Guide App (WIP) - [OdysseyTourGuide](https://github.com/gferiancek/ADND/tree/OdysseyTourGuideMaster)
