@@ -1,3 +1,451 @@
 <resources>
     <string name="app_name">OdysseyTourGuide</string>
+
+    // ViewPager Titles
+    <string name="kingdoms">Kingdoms</string>
+    <string name="npcs">NPCs</string>
+    <string name="enemies">Enemies</string>
+    <string name="collectibles">Collectibles</string>
+
+    // Kingdom Details
+    <string name="landmarks">Landmarks</string>
+
+    // Cap Kingdom
+    <string name="cap_name">Cap Kingdom</string>
+    <string name="cap_moon_count">31</string>
+    <string name="cap_regional_count">50</string>
+    <string name="cap_landmark_1">World\'s Best Hat</string>
+    <string name="cap_landmark_description_1">This eye-catching tower is famous in Bonneton, both as
+        a landmark itself and for the spectacular view from the \"brim.\"\n\nVisitors are allowed inside,
+        but many creatures call the tower home, much to the surprise of first timers.</string>
+    <string name="cap_landmark_2">Extremely Mobile Homes</string>
+    <string name="cap_landmark_description_2">In town, you will immediately notice the unique dwellings
+        shaped like hats. These constructions double as both house and airship for the Bonneters, who
+        take great pride in them.\n\nSome of the larger \"houseboats\" even have two stories. As private
+        dwellings, you can\'t just stroll inside, but the natives don\'t mind people climbing on top
+        of their homes. Perhaps being atop private property comes naturally to these hat-like people.</string>
+    <string name="cap_landmark_3">A Spectacle of a Bridge</string>
+    <string name="cap_landmark_description_3">The bridge that connects the central square and the hills
+        is called Glasses Bridge. It\'s a long, double-arched structure whose bottom is hidden in a sea
+        of clouds. When you see it, you\'ll understand its affectionate nickname immediately. Many
+        tourists enjoy the speedy thrill of rolling across the undulating structure—be sure to give it a try!</string>
+    <string name="cap_landmark_4">Old-Fashioned Lighting</string>
+    <string name="cap_landmark_description_4">These unique lights only appear in Bonneton. Since the
+        area gets so dark every time the moon goes behind the clouds, the lights are designed to be
+        switched on with a simple turn of the lantern. The elegant design of these lampposts draws many
+        tourists. They\'re even lovelier when turned on, so do give each one a spin as you pass by.</string>
+    <string name="cap_landmark_5">The \"Sometimes\" Bridge</string>
+    <string name="cap_landmark_description_5">The bridge connecting Central Square to Top-Hat Tower is
+        build to retract in an emergency. If this happens during your visit, don\'t panic—just use the
+        switch to restore the bridge.</string>
+    // Cascade Kingdom
+    <string name="cascade_name">Cascade Kingdom</string>
+    <string name="cascade_moon_count">40</string>
+    <string name="cascade_regional_count">50</string>
+    <string name="cascade_landmark_1">A Tall Drink of Water</string>
+    <string name="cascade_landmark_description_1">There are many waterfalls in the Cascade Kingdom, but
+        the area known as Fossil Falls is a special one.\n\nThere are few sights in nature as grand as
+        the millions of gallons of water pouring every second out of this giant triceratops skeleton.</string>
+    <string name="cascade_landmark_2">Nature in Balance</string>
+    <string name="cascade_landmark_description_2">The stone spire standing near the great falls has
+        miraculously remained balanced upright in this position, presumably for eons.\n\nOf particular
+        interest are the cubes of unknown material embedded in the stone. These cubes are the reason
+        for the common theory that the spire somehow fell from the sky. While this theory is difficult
+        to prove, it is equally hard to doubt when looking at this miraculous stone structure.</string>
+    <string name="cascade_landmark_3">The Ancient Wall</string>
+    <string name="cascade_landmark_description_3">No ordinary cliff face, this structure was carved out
+        painstakingly over many long years by people unknown. The wall is composed mainly of fossils,
+        and evidence suggests it has been broken many times, causing some to suggest that something is
+        buried inside. Visitors are encouraged to explore the mysteries surrounding the Great Barrier,
+        if they dare.</string>
+    <string name="cascade_landmark_4">The Prehistoric Tyrant</string>
+    <string name="cascade_landmark_description_4">The biggest draw for tourists to this area is that
+        dinosaurs still live here. Many people willingly put themselves at considerable risk for a
+        glimpse of the ancient \"terrible lizards.\"\n\nT-Rex, most terrible of all dinosaurs, can
+        pulverize a boulder with a single blow. On the other hand, most people don\'t realize how much
+        time they spend napping.</string>
+    <string name="cascade_landmark_5">An Old, Odd Structure</string>
+    <string name="cascade_landmark_description_5">No one knows how a Bonneton-style structure got buried
+        here. Bonneters travel often, so they may have lived here in the past. It is a helpful landmark
+        if you get lost, though.</string>
+    // Sand Kingdom
+    <string name="sand_name">Sand Kingdom</string>
+    <string name="sand_moon_count">89</string>
+    <string name="sand_regional_count">100</string>
+    <string name="sand_landmark_1">Tostarenan Town</string>
+    <string name="sand_landmark_description_1">A small town that serves as the hub for tourists planning
+        to visit the Inverted Pyramid. The colorful buildings and cheerful people provide a warm welcome
+        for visitors. They\'re happy to provide direction, so don\'t hesitate to say hello.</string>
+    <string name="sand_landmark_2">Mysterious Ancient Ruins</string>
+    <string name="sand_landmark_description_2">Head north from town and you\'ll be greeted by ancient
+        ruins that dot the expansive desert. Though many have become conflict regions patrolled by Bullet
+        Bills, their status as important heritage sites is undeniable.\n\nYour eye will be drawn to the
+        large stone tower at the heart of the ruins. Due to extensive hollowing underground, quicksand
+        has become prevalent in this area, so watch out.</string>
+    <string name="sand_landmark_3">Inverted Pyramid</string>
+    <string name="sand_landmark_description_3">The true \"can\'t miss\" of this region, the Inverted
+        Pyramid may look unstable, but rest assured it never topples and has thrilled tourists for years.
+        It is said that a legendary artifact called the Binding Band lies within, and the upside-down
+        pyramid symbolizes how those joined by it will never part even if the world turns upside down.</string>
+    <string name="sand_landmark_4">Jaxi</string>
+    <string name="sand_landmark_description_4">Let\'s have a look at the curious local transport method
+        known as the Jaxi. Just hop on the back of one, and as you might guess from their appearance,
+        you\'ll be in for a wild but completely reliable ride. Make good use of them and you\'ll be
+        exploring this unforgiving desert in comfort and style.</string>
+    <string name="sand_landmark_5">Living Heart of the Desert</string>
+    <string name="sand_landmark_description_5">Here\'s a spot to moisten your dried and withered heart,
+        with greenery and water to make you forget you\'re in the desert. The fish and birds are plentiful
+        and well worth a visit.</string>
+    // Lake Kingdom
+    <string name="lake_name">Lake Kingdom</string>
+    <string name="lake_moon_count">42</string>
+    <string name="lake_regional_count">50</string>
+    <string name="lake_landmark_1">The Domed Water Plaza</string>
+    <string name="lake_landmark_description_1">Lake Lamode, the land of fashion. The underwater Water
+        Plaza is protected by a glass dome, but don\'t worry, there\'s air inside to breathe. When you
+        look up at the lake from within the plaza, you can see Dorrie swimming amid the stunning scenery.</string>
+    <string name="lake_landmark_2">Window Shopping</string>
+    <string name="lake_landmark_description_2">Considered the most luxurious garment this kingdom has
+        to offer, the Lochlady Dress is displayed in the show window of the Water Plaza. Of all the garments
+        created by the Lochladies, only the very best and most beautiful is selected for this great honor.
+        It\'s a national treasure!\n\nIt's said that wearing this dress brings eternal happiness, so
+        naturally every bride yearns for it. Sadly, this lovely, one-of-a-kind item is not for sale.</string>
+    <string name="lake_landmark_3">Zippers of Mystery</string>
+    <string name="lake_landmark_description_3">Fitting of a kingdom famous for its fashion, you can find
+        zipper art all over the place here. Zippers can be securely fastened as well as opened and closed
+        freely, so perhaps they have a deeper meaning… That said, this particular zipper is more than
+        decoration. It actually works, so stop by and give it a try.</string>
+    <string name="lake_landmark_4">Dorrie the Aquatic Buddy</string>
+    <string name="lake_landmark_description_4">This gentle creature spends its days swimming gracefully
+        in Lake Lamode. If you\'re confident in your abilities, swimming alongside it might make for some
+        wonderful memories.\n\nAlthough able to live in any aquatic environment, some have heard Dorrie
+        complain that the lake is too small. Keep an eye out for Dorrie-themed souvenirs, which tourists just love!</string>
+    <string name="lake_landmark_5">Soaked in History</string>
+    <string name="lake_landmark_description_5">Once a spot for designers to relax and even dye cloth,
+        this soaking pool has a rich history. Since most activity centers around the lake town, this is
+        now a well-known fishing hole.</string>
+    // Wooded Kingdom
+    <string name="wooded_name">Wooded Kingdom</string>
+    <string name="wooded_moon_count">76</string>
+    <string name="wooded_regional_count">100</string>
+    <string name="wooded_landmark_1">The Living Factory</string>
+    <string name="wooded_landmark_description_1">No one knows who built the giant machines dotting this land,
+        but today the Steam Gardeners use them to maintain the greatest flower gardens in the world.
+        The giant dome is climate-controlled and apparently self-sufficient, operating with no maintenance
+        since ancient times.</string>
+    <string name="wooded_landmark_2">Guardians of Paradise</string>
+    <string name="wooded_landmark_description_2">Visitors are welcomed not only by the humid air, but
+        worker robots tending the flowers. They\'re known as Steam Gardeners, longtime residents of the
+        kingdom. You\'ll be impressed at how long they can work without rest, maintaining themselves
+        perfectly. But beyond being hard workers, the robots love flowers—some grow them right out of
+        their heads! You\'ll feel the Steam Gardeners\' warm hearts, from their flowers and also their
+        internal steam pumps.</string>
+    <string name="wooded_landmark_3">Flowers as a Way of Life</string>
+    <string name="wooded_landmark_description_3">While you\'ll see amazing flowers on any visit, you
+        might be lucky enough to see the famous Steam Gardens Soirée Bouquet. It features giant white
+        flowers that charm all who lay eyes on it. As you might guess from the name, it\'s by far the
+        most popular bouquet for wedding ceremonies, sought after by wedding planners the world over.</string>
+    <string name="wooded_landmark_4">A Deep Wood\'s Secret</string>
+    <string name="wooded_landmark_description_4">It doesn\'t appear on any tours, but there is an area
+        untouched by the machines of the Steam Gardens. Here the trees grow quickly, barely allowing
+        any light through. The Steam Gardeners do not speak of it, but rumor has it they discourage
+        visiting this place because of the danger posed by the giant creatures that call it home.</string>
+    <string name="wooded_landmark_5">A Growing Walkway</string>
+    <string name="wooded_landmark_description_5">Be sure to try the system of paths called the Flower
+        Road. You\'ll marvel at plants growing into temporary but walkable bridges. Watch your step,
+        though—nature has no handrails.</string>
+    // Cloud Kingdom
+    <string name="cloud_name">Cloud Kingdom</string>
+    <string name="cloud_moon_count">9</string>
+    <string name="cloud_landmark_1">Life Above the Clouds</string>
+    <string name="cloud_landmark_description_1">Perhaps everyone has had the experience of looking up
+        in the clouds and imagining what it would be like to live among them. As it turns out, as
+        fantastical as it may sound, there was once such a kingdom whose citizens looked down on the
+        world from a fluffy, puffy paradise.</string>
+    <string name="cloud_landmark_2">Strangely Floaty Material</string>
+    <string name="cloud_landmark_description_2">While the particles that make up a cloud are extremely
+        small and light, researchers have recently discovered a kind of cloud-like material that one can
+        walk on. First discovered in Fossil Falls, this substance can change into and hold new shapes and
+        even support weight.\n\nThe discovery prompted certain researchers to open an investigation into
+        whether there might have once been a \"cloud kingdom\" in the sky.</string>
+    <string name="cloud_landmark_3">Vestiges of Greatness</string>
+    <string name="cloud_landmark_description_3">Once researchers started looking for places in the sky,
+        they quickly found a large platform of the levitating substance, dubbed Nimbus Arena.\n\nMysteriously,
+        the land had markings that accurately showed the waxing and waning phases of the moon. Now, besides
+        the obvious \"how,\" researchers had to question \"why?\"</string>
+    <string name="cloud_landmark_4">Giant Cloud Arches</string>
+    <string name="cloud_landmark_description_4">Researchers are thus baffled by the large cloud archway
+        here. Some theorize that it\'s a kind of reticule that aligns with the moon. Some evidence suggests
+        that the arch pulled this kingdom\'s Moon Rock to a specific location from the moon.\n\nThe only
+        certainty is that the Cloud Kingdom will continue to interest researchers for many years.</string>
+    <string name="cloud_landmark_5">Shower of Flowers</string>
+    <string name="cloud_landmark_description_5">The investigation is concluded now and yielded few undisputed
+        facts. But the bits of cloud that fall like flower petals here make it the most dreamlike place
+        you\'ll ever visit.</string>
+    // Lost Kingdom
+    <string name="lost_name">Lost Kingdom</string>
+    <string name="lost_moon_count">35</string>
+    <string name="lost_regional_count">50</string>
+    <string name="lost_landmark_1">A Dense, Primeval Forest</string>
+    <string name="lost_landmark_description_1">Few visit these remote islands surrounded by poison, but
+        they are dense with plants that have followed a unique evolutionary path. There is a strange
+        unity between the vibrantly colored plants, the odd animals, and the sea of poison surrounding them.</string>
+    <string name="lost_landmark_2">Nature\'s Traffic Lights</string>
+    <string name="lost_landmark_description_2">The Tropical Wigglers found here are not aggressive and
+        are mostly genial and pleasant creatures. You should, however, avoid touching them, for safety\'s
+        sake. They stretch and contract their bodies constantly and have a habit of stretching across major
+        pathways, so you may need to wait for the right moment to pass. This behavior has given them the
+        nickname \"traffic lights of the island.\" Be sure to look both ways before your cross.</string>
+    <string name="lost_landmark_3">Thief of the Skies</string>
+    <string name="lost_landmark_description_3">The undisputed ruler of the skies here is the Klepto. This
+        large bird has keen eyesight that enables it to spot prey from far above before swooping down
+        to snatch it up in an instant. Once ensnared in its sharp claws, escape is quite difficult, and
+        many smaller visitors have been carried off in this way.</string>
+    <string name="lost_landmark_4">Ruins Steeped in Mystery</string>
+    <string name="lost_landmark_description_4">The purpose of the distinctive ruins scattered throughout
+        the island remains unclear. The starburst pattern that appears on them MAY indicate a spot of
+        capable of withstanding a great impact. The builders clearly mastered stonework, as these structures
+        still operate and move perhaps centuries after their creators had disappeared.</string>
+    <string name="lost_landmark_5">Watch Those Hands</string>
+    <string name="lost_landmark_description_5">The Trapeetle is a local hazard. Its large hands capture
+        prey, who are held tight as the creature explodes in a tragic display seen absolutely nowhere
+        else in nature. Best to avoid.</string>
+    // Metro Kingdom
+    <string name="metro_name">Metro Kingdom</string>
+    <string name="metro_moon_count">81</string>
+    <string name="metro_regional_count">100</string>
+    <string name="metro_landmark_1">Scraping the Sky</string>
+    <string name="metro_landmark_description_1">The skyscrapers of New Donk City are most people\'s first
+        association with the city. But even among those, New Donk City Hall stands out as the very symbol
+        of this great city, so don\'t miss it. Who knows, you might even run into world-renowned Mayor Pauline!</string>
+    <string name="metro_landmark_2">A Million-Coin View</string>
+    <string name="metro_landmark_description_2">If you\'ve come to New Donk City, you owe it to yourself
+        to see it at night. The best viewing spot is the landmark New Donk City Hall, but sadly the interior
+        is closed for construction, so you\'ll have to aim for one of the neighboring buildings.\n\nIf it\'s
+        festival season, you\'ll have a chance at a once-in-a-lifetime experience, but the timing is a bit
+        irregular, so be sure to check the schedule beforehand.</string>
+    <string name="metro_landmark_3">Crazy Cap Flagship Store</string>
+    <string name="metro_landmark_description_3">There\'s probably only one brand that the entire world
+        knows, and that\'s Crazy Cap. Their original flagship store is right here in New Donk City. The
+        unique storefront is converted from an old theater. Theater space is no longer much in demand,
+        with so many street performers in the city.</string>
+    <string name="metro_landmark_4">Always Be Constructing</string>
+    <string name="metro_landmark_description_4">New Donkers are used to construction and new developments.
+        There\'s always work being done below ground, on rooftops, and inside buildings, so power lines
+        never get taken down—they run throughout town. Unaccustomed travelers should watch out for the
+        cranes, girders, and manholes scattered everywhere.</string>
+    <string name="metro_landmark_5">Scooting Across Town</string>
+    <string name="metro_landmark_description_5">These motor scooters may look old-fashioned, but they
+        pack a punch and are perfect for tooling around the city. Be sure to try one out!</string>
+    // Snow Kingdom
+    <string name="snow_name">Snow Kingdom</string>
+    <string name="snow_moon_count">55</string>
+    <string name="snow_regional_count">50</string>
+    <string name="snow_landmark_1">A Frozen Land</string>
+    <string name="snow_landmark_description_1">The Snow Kingdom is a world of ice and snow that freezes
+        the body but dazzles the eyes. Stay alert, though—one bad step can drop you into the dangerously
+        frigid sea. Despite the cold, the town of Shiveria is famous for its warm hospitality, and on
+        clear days, the view can\'t be matched.</string>
+    <string name="snow_landmark_2">A Warm Community</string>
+    <string name="snow_landmark_description_2">Shiveria is a huge excavated settlement beneath the ice.
+        It\'s warmer here than up above, but you\'ll want to bundle up all the same.\n\nDespite the cold,
+        the cheerful Shiverians will thaw any traveller\'s frozen heart. And if you visit the center square,
+        you'll see the fiery passion the Shiverians have for their traditional races. Take one look at
+        the screens showing the action, and you\'ll be caught up in the excitement too!</string>
+    <string name="snow_landmark_3">Bound Bowl Grand Prix</string>
+    <string name="snow_landmark_description_3">THE sporting event is the Bound Bowl Grand Prix. Only
+        Shiverians are allowed to participate, but when you watch a race, you\'ll understand why no one
+        else COULD participate. Only Shiverian sturdiness could survive a race based on bounding violently
+        through the course and crashing into one another. Be sure to see it if you get a chance!</string>
+    <string name="snow_landmark_4">Icing and Racing</string>
+    <string name="snow_landmark_description_4">Beyond racing, Shiverians are known for elaborate baked goods.
+        Especially renowned is the Frost-Frosted Cake, which is very popular at weddings. By tradition,
+        only the Shiverian Elder is allowed to make this extraordinary confection. What\'s more, they
+        are specifically created as the grand prize for the Bound Bowl Grand Prix, so the only way to
+        get one is to convince the winner to let you have it.</string>
+    <string name="snow_landmark_5">Crevasse Menace</string>
+    <string name="snow_landmark_description_5">Lurking in the local crevasses you may find a Bitefrost.
+        These creatures move through the ice under their prey, then thrust upward, chomping. Caution
+        (and jumping ability) is advised.</string>
+    // Seaside Kingdom
+    <string name="seaside_name">Seaside Kingdom</string>
+    <string name="seaside_moon_count">71</string>
+    <string name="seaside_regional_count">100</string>
+    <string name="seaside_landmark_1">Raise a Glass</string>
+    <string name="seaside_landmark_description_1">The spectacle known as Glass Tower isn\'t just majestic,
+        it also fulfills the critical role of manufacturing the famous local product Sparkle Water.
+        \n\nIt stands atop the Glass Palace, which has a uniquely beautiful architectural style. It\'s
+        a treasure to be explored!</string>
+    <string name="seaside_landmark_2">A Miraculous Mixture</string>
+    <string name="seaside_landmark_description_2">The four fountains in Bubblaine spray seawater toward
+        the Glass Tower. The ocean here is carbonated but otherwise unremarkable. However, when blended
+        in the Glass Tower, it takes on a deep, elegant flavor and becomes Sparkle Water!\n\nThis treasured
+        beverage is said to bring good fortune, happiness, and even romance to those who drink it, which
+        has led to it being featured in many wedding ceremonies.</string>
+    <string name="seaside_landmark_3">A Love Nest for Eels</string>
+    <string name="seaside_landmark_description_3">In addition to the fun resort spots found in Bubblaine,
+        there are some notable dangerous locations as well. One of these is the underwater cave connected
+        to the lighthouse where gigantic creatures called Maw-Rays make their nests and shoot out their
+        long bodies in response to stimuli. A little caution can go a long way when exploring this place.</string>
+    <string name="seaside_landmark_4">Nature\'s Hot Tub</string>
+    <string name="seaside_landmark_description_4">A ways away from the beach sits an outdoor bath fed by
+        a natural hot spring. Featuring full ocean views, it has become quite popular with tourists.
+        This spring was formed by volcanic activity on the ocean floor, and it\'s said to have numerous
+        medicinal effects. Take one dip, and we\'re sure you\'ll fall for its charms. It\'s also a lovely
+        natural reprieve from the modern resort developments.</string>
+    <string name="seaside_landmark_5">Relaxing Competition</string>
+    <string name="seaside_landmark_description_5">When in Bubblaine, be sure to enjoy a game of beach
+        volleyball on the local court. The on-site coach gives strong guidance, even for beginners. As
+        they say around here, \"Let\'s play!\"</string>
+    // Luncheon Kingdom
+    <string name="luncheon_name">Luncheon Kingdom</string>
+    <string name="luncheon_moon_count">68</string>
+    <string name="luncheon_regional_count">100</string>
+    <string name="luncheon_landmark_1">Cooking with a Volcano</string>
+    <string name="luncheon_landmark_description_1">Surrounded by strange pink lava, Mount Volbono is
+        colorful and vibrant, a vision straight from a picture book. It is famous for its cuisine, with
+        dishes simmered over the volcano, and chock-full of the local produce that grows to enormous size
+        thanks to the volcanic climate.</string>
+    <string name="luncheon_landmark_2">The Historic \"Old Town\"</string>
+    <string name="luncheon_landmark_description_2">On your way to Mount Volbono, you\'ll pass through the
+        Old Town, ringed by the ruined wall that once enclosed the town. These sturdy, cut-stone walls
+        even now suggest the prosperity of those times. Atop the walls are little mounds of salt, carried
+        by the wind and piled up naturally. Visitors can walk along the tops of the walls—do so if you get
+        a chance. The sights here are very different from the colorful scenery of Peronza Plaza, but
+        equally breathtaking.</string>
+    <string name="luncheon_landmark_3">Cooking Carnival</string>
+    <string name="luncheon_landmark_description_3">The highlight of Mount Volbono\'s year is the Cooking
+        Carnival, where visitors from all over the world come to sample the famous Stupendous Stew. While
+        cooking on a volcano is of course a grand spectacle, the dish itself has a surprisingly delicate
+        flavor, described most frequently in reviews as a \"melty deliciousity.\"</string>
+    <string name="luncheon_landmark_4">A Resting Place for Meat</string>
+    <string name="luncheon_landmark_description_4">The giant slab of meat used in the Stupendous Stew
+        is crusted generously in salt and left to rest on a high perch near the volcano. Aging the meat
+        high above the lava, cooled by the wind, is essential to creating the core flavor. If you
+        arrived before the Cooking Carnival, be sure to take the opportunity to visit the platform and
+        see the meat resting soundly before its long journey.</string>
+    <string name="luncheon_landmark_5">Peronza Plaza</string>
+    <string name="luncheon_landmark_description_5">Be sure to visit the centrally located Peronza Plaza
+        for a friendly welcome. Once among the colorful heaps of giant ingredients and succulent smells,
+        you may find it hard to leave.</string>
+    // Ruined Kingdom
+    <string name="ruined_name">Ruined Kingdom</string>
+    <string name="ruined_moon_count">10</string>
+    <string name="ruined_landmark_1">Reaching for the Heavens</string>
+    <string name="ruined_landmark_description_1">This tower once collected energy from lightning in the
+        thunderclouds that constantly swirl here. Some say it was destroyed by repeated lightning strikes,
+        but others note the unnatural shapes into which the tower crumbled and wonder if it fell into
+        ruin for different reasons entirely.</string>
+    <string name="ruined_landmark_2">High Stakes</string>
+    <string name="ruined_landmark_description_2">Amid the ruins, these swords surely stand out. They\'re
+        thought to be left over from a large battle here in Crumbleden. One certainly feels a sense of
+        intentionality in the way they\'re stuck straight down, as if fallen from the sky. Some see them
+        not as swords, but rather nails or stakes. Perhaps the eyelets at the top allowed ropes or chains
+        through to anchor something, but it's impossible to say what.</string>
+    <string name="ruined_landmark_3">Ruined Dreams</string>
+    <string name="ruined_landmark_description_3">It\'s only because of the people of Crumbleden\'s skill
+        in construction that there are ruins left here to see. Their building style was reliable and
+        straightforward, but whatever they\'d hoped to accomplish by harnessing the fearsome power of
+        lightning remains unclear. Some have theorized that the circular plaza atop the tower was built
+        for a standoff of some kind.</string>
+    <string name="ruined_landmark_4">The Great Altar</string>
+    <string name="ruined_landmark_description_4">It\'s thought that this altar was built so this former
+        kingdom could communicate with (or perhaps confront) something. This is the only altar built here,
+        and scholars have been keen to discover its intent. It\'s also said to be shaped like something
+        in particular. The idea that it was meant to charge lightning has been disproved. The new theory
+        is that it was built to call something down and then restrain the lightning.</string>
+    <string name="ruined_landmark_5">Are Those…Claw Marks?</string>
+    <string name="ruined_landmark_description_5">The stone here has numerous large slashes cut through
+        it, often in parallel tracks suggesting giant claws. But that can\'t be right—what could claw
+        through stone?</string>
+    // Bowser's Kingdom
+    <string name="bowsers_name">Bowser\'s Kingdom</string>
+    <string name="bowsers_moon_count">62</string>
+    <string name="bowsers_regional_count">100</string>
+    <string name="bowsers_landmark_1">Terrifying Gatekeepers</string>
+    <string name="bowsers_landmark_description_1">Don\'t run afoul of the Stairface Ogres that guard this
+        kingdom. When they spot an intruder, they bring their huge mallets down, no questions asked.
+        On the other hand, you have to admire their tenacity and work ethic. The scars on their faces
+        show they don\'t give up easily.</string>
+    <string name="bowsers_landmark_2">Beautiful Tile Work</string>
+    <string name="bowsers_landmark_description_2">This kingdom\'s architecture is unique. Roofs are made
+        of heavy, layered tiles that will not budge even if walked upon. They also create a uniformity in
+        the overall design, enhancing the beauty of the palace.\n\nThough you can move along the roofs,
+        this palace rests quite high in the sky, and if you fall off, you will most definitely die.
+        It\'s not the surest footing either, so be careful.</string>
+    <string name="bowsers_landmark_3">Statues Guard the Court</string>
+    <string name="bowsers_landmark_description_3">The palace tower highlights the inner citadel, and the
+        gate leading to it is guarded by fearsome statues. The statues are fashioned after gods of wind
+        and thunder, the perfect motif for a sky palace, and since they are modeled on Bowser, the ruler
+        of this kingdom, they serve as a warning to foes here and abroad.</string>
+    <string name="bowsers_landmark_4">Impressive Fortifications</string>
+    <string name="bowsers_landmark_description_4">Surrounding the inner citadel are the second and third
+        courts. The second court is especially fortified, with many cannons to repel invaders. Cannonballs
+        often roll along the ground, and many tourists fall trying to evade them. Legends speak of invaders
+        repelling the cannonballs with spears, but no mere mortal could hope to do this, so try not
+        to get too close!</string>
+    <string name="bowsers_landmark_5">An Oasis of Calm</string>
+    <string name="bowsers_landmark_description_5">This elegant garden is a balm for the brutality of
+        this kingdom and will help you forget all the hardships you faced to reach it. You can even buy
+        souvenirs, so be sure you stop by!</string>
+    // Moon Kingdom
+    <string name="moon_name">Moon Kingdom</string>
+    <string name="moon_moon_count">38</string>
+    <string name="moon_regional_count">50</string>
+    <string name="moon_landmark_1">Wedding Hall</string>
+    <string name="moon_landmark_description_1">Legends tell of a moon goddess, and this wedding hall
+        is said to have been created in her honor, though no one knows for sure. The stunning exterior
+        contrasts beautifully with the black sky, a symbol of Honeylune Ridge. Weddings here are often
+        open, so lucky travelers can join the party.</string>
+    <string name="moon_landmark_2">Lunar Life Forms</string>
+    <string name="moon_landmark_description_2">The surface of the moon is harsh, but a few creatures do
+        live there. Take heed if tempted to study their unique shape and movement up close, as they have
+        sharp spikes. it\'s probably best to observe them from a safe vantage point.\n\nInterestingly,
+        similar creatures can be found in the Seaside Kingdom. Did life on our planet (which began in the
+        seas) actually originate on the moon?</string>
+    <string name="moon_landmark_3">Cubes of Mystery</string>
+    <string name="moon_landmark_description_3">Possessing unique metallic properties, it\'s hard to imagine
+        how these cubic Moon Rocks formed naturally, but they can be found in great abundance up here.
+        Similar rocks have also been found in various areas on the planet, and the method of their formation
+        remains shrouded in mystery. We recommend seeking one out and pondering its mysteries up close!</string>
+    <string name="moon_landmark_4">Lunar Interior: Secrets</string>
+    <string name="moon_landmark_description_4">We\'ve heard stories about extensive caverns beneath the
+        lunar interior. There\'s an entrance directly into the moon rock that\'s easily accessed, but it
+        sounds quite dangerous inside.\n\nOn the other hand, tales abound of thrills and mysteries waiting
+        within, so it may be worth investigating. Be sure to take the necessary precautions before
+        you go, though!</string>
+    <string name="moon_landmark_5">A View to Remember</string>
+    <string name="moon_landmark_description_5">Our world as seen from the Wedding Hall is something everyone
+        needs to experience at least once in their life. With the planet as your witness, it\'s no wonder
+        weddings are held here.</string>
+    // Mushroom Kingdom
+    <string name="mushroom_name">Mushroom Kingdom</string>
+    <string name="mushroom_moon_count">104</string>
+    <string name="mushroom_regional_count">100</string>
+    <string name="mushroom_landmark_1">A Lovely Portrait in Glass</string>
+    <string name="mushroom_landmark_description_1">Because Princess Peach is so often absent from her kingdom,
+        her citizens took it upon themselves to create a stained-glass portrait of her on the castle balcony.
+        While a pale reflection of the genuine article, the portrait brings comfort to the citizenry when
+        their princess can't be with them.</string>
+    <string name="mushroom_landmark_2">Towering Mysteries</string>
+    <string name="mushroom_landmark_description_2">In older times, the towers dotting the landscape here
+        were watchtowers. Now they hold and preserve a series of mysterious paintings. These incredibly
+        detailed works are so real that admirers speak of being pulled into another world by the
+        paintings.\n\nHowever, it\'s extremely rare for tourists to be permitted to see them, due to
+        some undescribed danger, and casual visits are discouraged.</string>
+    <string name="mushroom_landmark_3">Places to Relax</string>
+    <string name="mushroom_landmark_description_3">The Toads of the Mushroom Kingdom value their relaxation
+        and have created several lovely spots on the castle grounds for that purpose. Neither too small
+        nor too large, and with just the right amount of ornamentation, these plazas and courtyards exemplify
+        the best traits of this kingdom.</string>
+    <string name="mushroom_landmark_4">Slightly Scary Woods</string>
+    <string name="mushroom_landmark_description_4">Even the serene Mushroom Kingdom has its more dangerous
+        locales. This forest was originally planted for mushroom cultivation, but while the mushrooms
+        have flourished, a large number of wild Goombas have also moved in. While it\'s come to be known
+        as Goomba Woods, it\'s still a pleasant place for a stroll, so if you\'re not afraid of these
+        fearsome beasts, why not treat yourself to a walk?</string>
+    <string name="mushroom_landmark_5">A Castle\'s Water Feature</string>
+    <string name="mushroom_landmark_description_5">The only lake on the castle grounds features a small
+        but lovely waterfall and is a popular spot to visit. The lake formed naturally, but some claim
+        that its shape is familiar. Hmm…</string>
 </resources>
